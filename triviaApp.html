@@ -1,0 +1,19 @@
+<h1 id="demo"></h1>
+<h3 id="demo2" style="display:none;"></h3>
+<button onclick="getit()">Get a new question</button>
+<button onclick="getElementById('demo2').style.display='block'" type="button" name="button">show the answer</button>
+
+<script>
+function getit(){
+  document.getElementById('demo2').style.display='none'
+  var num = Math.floor((Math.random()*100))
+  fetch('http://jservice.io/api/clues')
+  .then(res=>res.json())
+  .then(function(data){
+    let question = data[num].question
+    let answer = data[num].answer
+    document.getElementById("demo").innerHTML=`${question}`
+    document.getElementById("demo2").innerHTML=`${answer}`
+  })
+  }
+</script>
