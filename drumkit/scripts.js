@@ -2,7 +2,6 @@ let keyList = Array.from(document.getElementsByClassName('key'))
 keyList.forEach(key=>key.addEventListener('transitionend',removeClass))
 
 window.addEventListener('keydown',detect)
-prompt()
 function detect(e){
   let x = document.querySelectorAll(`[data-key='${e.keyCode}'`)
   if (x.length>0){
