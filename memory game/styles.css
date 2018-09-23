@@ -18,8 +18,7 @@ button{
 }
 
 .memory-game{
-  width: 850px;
-  height: 850px;
+  height: 100vh;
   margin:auto;
   display: -webkit-box;
   display: -ms-flexbox;
