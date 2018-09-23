@@ -85,4 +85,4 @@ function startOver(){
   location.reload()
 }
 let element=document.getElementsByTagName('section')[0]
-element.setAttribute('style', `width: ${element.offsetHeight}px`);
+element.setAttribute('style', `max-width: ${element.offsetHeight}px`);
