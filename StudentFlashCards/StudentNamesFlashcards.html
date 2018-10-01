@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body style="background-color:aqua">
+    <img id="student" src="" alt="student"  style="display:none; height:75vh;border-style:solid; border-width:2px;">
+    <h2>Select which grade(s) you want to review</h2>
+
+    <button style="position:absolute;bottom:20vh;left:60vh;" type="button" name="button" onclick="switchUp()">Next</button>
+<div>
+    <input type="checkbox" name="9" value="pics9"> 9th Grade<br>
+    <input type="checkbox" name="10" value="pics10"> 10 Grade<br>
+    <input type="checkbox" name="11_12" value="pics11_12"> 11th and 12th Grade<br>
+</div>
+  </body>
+
+</html>
+<script>
+
+function switchUp(){
+  let n = document.getElementsByTagName("input")[0]
+  let t = document.getElementsByTagName("input")[1]
+  let et = document.getElementsByTagName("input")[2]
+
+  if (n.checked && t.checked && et.checked){
+    pics = pics9.concat(pics10).concat(pics11_12)
+    console.log("all")
+  }else if (n.checked && t.checked) {
+    pics = pics9.concat(pics10)
+    console.log("9&10")
+
+  }else if (n.checked && et.checked){
+    pics = pics9.concat(pics11_12)
+    console.log("9/11-12")
+
+  }else if (n.checked){
+    pics = pics9
+    console.log("9")
+
+  }else if (t.checked && et.checked){
+    pics = pics10.concat(pics11_12)
+    console.log("10/11-12")
+
+  }else if (t.checked){
+    pics = pics10
+    console.log("10")
+
+  }else if (et.checked){
+    pics = pics11_12
+    console.log("11-12")
+
+  }
+ randomStudent = Math.floor(Math.random() * pics.length)
+ document.getElementById("student").src=pics[randomStudent]
+ document.getElementsByTagName("img")[0].style.display="";
+}
+
+let pics9 = [
+"./images/06274.jpg",
+"./images/06254.jpg",
+"./images/05671.jpg",
+"./images/06262.jpg",
+"./images/06265.jpg",
+"./images/06301.jpg",
+"./images/05668.jpg",
+"./images/06260.jpg",
+"./images/06255.jpg",
+"./images/06303.jpg",
+"./images/06246.jpg",
+"./images/05655.jpg",
+"./images/06270.jpg",
+"./images/06256.jpg",
+"./images/06229.jpg",
+"./images/06277.jpg",
+"./images/06234.jpg",
+"./images/06251.jpg"]
+
+let pics10=[
+"./images/06145.jpg",
+"./images/06105.jpg",
+"./images/06218.jpg",
+"./images/05631.jpg",
+"./images/06120.jpg",
+"./images/06191.jpg",
+"./images/06203.jpg",
+"./images/06196.jpg",
+"./images/06212.jpg",
+"./images/06205.jpg",
+"./images/06149.jpg",
+"./images/06118.jpg",
+"./images/05643.jpg",
+"./images/05626.jpg",
+"./images/05628.jpg",
+"./images/05633.jpg",
+"./images/06216.jpg"]
+
+let pics11_12=[
+"./images/05956.jpg",
+"./images/05946.jpg",
+"./images/05923.jpg",
+"./images/05642.jpg",
+"./images/05586.jpg",
+"./images/06084.jpg",
+"./images/05615.jpg",
+"./images/06077.jpg",
+"./images/06074.jpg",
+"./images/06054.jpg",
+"./images/06020.jpg",
+"./images/05997.jpg",
+"./images/05983.jpg"
+]
+</script>

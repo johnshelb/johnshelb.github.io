@@ -10,12 +10,10 @@ body{
   background: #060AB2
 }
 
-button{
-  width:10vh;
-  height:20vh;
-  background-color: red;
-  font-size: 25px;
+h2{
+  padding-left:10px;
 }
+
 
 .memory-game{
   height: 100vh;
@@ -79,4 +77,27 @@ button{
   right:10%;
   width: 7.5%;
   color:white;
+}
+
+#sidebar{
+  width: 15vh;
+  height: 55vh;
+  background-color: green;
+  position: relative;
+  top:10%;
+}
+
+#arrow{
+  height:12vh;
+  width:10vh;
+  padding-left: 10%;
+  position: relative;
+}
+
+button{
+  width:15vh;
+  height:20vh;
+  margin-bottom: 5%;
+  background-color: red;
+  font-size: 20px;
 }
