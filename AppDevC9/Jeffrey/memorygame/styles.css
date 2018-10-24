@@ -1,51 +1,69 @@
 *{
-  box-sizing:border-box;
- }
- body{
+    box-sizing:border-box;
+}
 
-     height:100vh;
-     display:flex;
-     background:red;
- }
- section{
-    width:800px;
- }
-
- .memory-game{
+body{
     height:100vh;
-    margin:auto;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    flex-wrap:wrap;
-    perspective:1000px;
- }
+    background:#060AB2
+}
 
- .memory-card{
-    width:calc(25% - 10px);
-    height:calc(33.333% - 10px);
-    margin:5px;
-    transform-style:preserve-3d;
+section{
+    width:800px;
+}
+
+.memory-game{
+    height: 100vh;
+    margin:auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-perspective:1000px;
+            perspective:1000px;
+}
+
+.memory-card{
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transition:-webkit-transform .5s;
+    transition:-webkit-transform .5s;
     transition:transform .5s;
- }
+    transition:transform .5s, -webkit-transform .5s;
+}
 
- .memory-card:active{
-    transform:scale(0.97);
+.memory-card:active{
+    -webkit-transform: scale(0.97);
+            transform: scale(0.97);
+    -webkit-transition:-webkit-transform .2s;
+    transition:-webkit-transform .2s;
     transition:transform .2s;
- }
+    transition:transform .2s, -webkit-transform .2s;
+}
 
- .memory-card.flip{
-    transform: rotateY(180deg);
- }
+.memory-card.flip {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg)
+}
 
- .front-face,.back-face{
+.front-face, .back-face{
     width: 100%;
     height: 100%;
-    padding:20px;
-    position:absolute;
-    border-radius:5px;
-    background:#1C7CCC;
-    backface-visibility:hidden;
- }
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: #1C7CCC;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
 
- .front-face{
-    transform:rotateY(180deg);
- }
+.front-face{
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+}
