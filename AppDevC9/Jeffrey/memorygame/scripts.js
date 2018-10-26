@@ -5,7 +5,7 @@ let lockBoard = false;
 let firstClick = true;
 let firstCard,secondCard,startTime;
 let element=document.getElementsByTagName('section')[0]
-element.setAttribute('sytle',`width: ${element.offsetHeight}px`);
+element.setAttribute('style',`width: ${element.offsetHeight}px`);
 
 cards.forEach(card=>{
     let randomPos = Math.floor(Math.random() * 12);
