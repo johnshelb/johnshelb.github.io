@@ -1,7 +1,7 @@
 /* html {
 font-size:10px;
 background:url(https://public-media.smithsonianmag.com/filer/1e/1e/1e1e3aea-e930-45d2-9bc4-6dd50cccf66d/istock-511313058.jpg)bottom center;
-/* needed to fix image url (can't use a thumbnail) */
+/* needed to fix image url (can't use a thumbnail) 
 background-size:cover;
 }
 body,html {
