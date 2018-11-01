@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <style media="screen">
+     *{
+       box-sizing: border-box;
+       padding:0;
+       margin:0;
+     }
+     body{
+       background-color: aqua;
+     }
+   </style>
+ </head>
+ <body>
+   <h1 id="score" style="width:350px;margin:auto;">Use the arrows to move the square to catch the ball--you have 30 seconds!</h1>
+   <h2 id="timer" style="width:150px;margin:auto;"></h2>
+   <div id="box" style="height: 100px; width: 100px; background: blue; position: absolute; left: 300px; top: 100px;"></div>
+   <div id="target" style="height: 50px; width: 50px; background: red; position: absolute; left: 30px; top: 10px;border-radius:50%;"></div>
+
+<script type="text/javascript">
+  window.addEventListener('keydown',move)
+  let box=document.getElementById('box')
+  let target=document.getElementById('target')
+  let score=0
+  let timer=30
+  let interv=setInterval(movingTarget,1000)
+
+
+  function movingTarget(){
+    timer--
+    if(timer<=0){
+      window.removeEventListener('keydown',move)
+      clearInterval(interv)
+      document.getElementById('timer').innerText="Game Over"
+    }else{
+      document.getElementById("timer").innerHTML=`${timer}`
+      target.style.top=`${Math.floor(Math.random()*721)}`+"px"
+      target.style.left=`${Math.floor(Math.random()*window.innerWidth)}` + "px"
+      target.style.visibility="visible"
+    }
+  }
+
+  function move(e){
+    boxTop=parseInt(box.style.top)
+    boxLeft=parseInt(box.style.left)
+    if (e.keyCode==38){
+      if (parseInt(box.style.top)<=99) {
+        return
+      }else
+        box.style.top=`${boxTop-100}`+'px'
+    }else if (e.keyCode==40){
+      if (parseInt(box.style.top)>=window.innerHeight-115) return
+      box.style.top=`${boxTop+100}`+'px'
+    }
+     else if (e.keyCode==37){
+      if (parseInt(box.style.left)<=99) return
+      box.style.left=`${boxLeft-100}`+'px'
+    }
+    else if (e.keyCode==39){
+      if (parseInt(box.style.left)>=window.innerWidth-100) return
+      box.style.left=`${boxLeft+100}`+'px'
+    }
+     else{
+       return
+    }
+   boxTop=parseInt(box.style.top)
+   boxLeft=parseInt(box.style.left)
+   targTop=parseInt(target.style.top)
+   targLeft=parseInt(target.style.left)
+   checkHit(boxTop,boxLeft,targTop,targLeft)
+}
+
+  function checkHit(boxTop,boxLeft,targTop,targLeft){
+    if ((targTop+50>=boxTop) && (targTop<=boxTop+100) &&  (targLeft + 50>=boxLeft)  && (targLeft<= boxLeft + 100)){
+      score++
+      document.getElementById("score").innerText=`That's ${score}!`
+      target.style.visibility="hidden"
+      window.removeEventListener('keydown',move)
+      setTimeout(reset,250)
+    }
+  }
+
+  function reset(){
+    window.addEventListener('keydown',move)
+  }
+</script>
+</body>
+</html>

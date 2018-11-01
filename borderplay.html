@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>border play</title>
+    <style media="screen">
+      html{
+        background: url(http://unsplash.it/1500/1000?image=881&blur=50);
+      }
+
+      div{
+        border:5px solid red;
+        height:200px;
+        width:200px;
+        position: absolute;
+        top:calc(50% - 100px);
+        left:calc(50% - 100px);
+        border-radius: 0%;
+      }
+      input, button{
+        position:absolute;
+        bottom:400px;
+        left:400px;
+      }
+      p{
+        position:relative;
+        left:400px;
+        top:225px;
+        width:100px;
+      }
+      pre{
+        position: relative;
+        top:50px;
+        left:10px;
+      }
+      .first{
+        position: relative;
+        top:50px;
+        left:20px;
+      }
+      .second{
+        position: relative;
+        top:50px;
+        left:2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="">
+      <span class="first">This div has a height and width of 200px </span>
+      <p class="second">It has a solid red border of 5px </p>
+
+      <pre></pre>
+
+    </div>
+    <p>enter a number to set the border radius percentage or just click through to start at 0 and increment</p>
+    <input type="text" value="0">
+    <button style="left:450px" type="button" name="button" onclick="changeBorderRadius()">Submit</button>
+
+    <script type="text/javascript">
+     let br = 0
+     let p = document.getElementsByTagName("pre")[0]
+      function changeBorderRadius(){
+        p.innerText="border radius is now "
+        br++
+        x=document.getElementsByTagName("input")[0]
+        divx=document.getElementsByTagName("div")[0]
+        if(!x.value){
+        divx.style.borderRadius=`${br}%`
+        x.value=""
+      p.innerText+=br
+      }else{
+        divx.style.borderRadius=`${x.value}%`
+        p.innerText+=`${x.value}`
+        x.value=""
+        br=0
+      }
+      }
+    </script>
+  </body>
+</html>
