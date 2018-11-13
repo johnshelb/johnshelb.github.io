@@ -10,9 +10,9 @@
 
     <button style="position:absolute;bottom:20vh;left:60vh;" type="button" name="button" onclick="switchUp()">Next</button>
 <div>
-    <input type="checkbox" name="9" value="pics9"> 9th Grade<br>
-    <input type="checkbox" name="10" value="pics10"> 10 Grade<br>
-    <input type="checkbox" name="11_12" value="pics11_12"> 11th and 12th Grade<br>
+    <input type="checkbox" name="9" value="pics9" checked="true"> 9th Grade<br>
+    <input type="checkbox" name="10" value="pics10" checked="true"> 10 Grade<br>
+    <input type="checkbox" name="11_12" value="pics11_12" checked="true"> 11th and 12th Grade<br>
 </div>
   </body>
 
@@ -26,35 +26,30 @@ function switchUp(){
 
   if (n.checked && t.checked && et.checked){
     pics = pics9.concat(pics10).concat(pics11_12)
-    console.log("all")
   }else if (n.checked && t.checked) {
     pics = pics9.concat(pics10)
-    console.log("9&10")
 
   }else if (n.checked && et.checked){
     pics = pics9.concat(pics11_12)
-    console.log("9/11-12")
 
   }else if (n.checked){
     pics = pics9
-    console.log("9")
 
   }else if (t.checked && et.checked){
     pics = pics10.concat(pics11_12)
-    console.log("10/11-12")
 
   }else if (t.checked){
     pics = pics10
-    console.log("10")
 
   }else if (et.checked){
     pics = pics11_12
-    console.log("11-12")
 
   }
+
  randomStudent = Math.floor(Math.random() * pics.length)
  document.getElementById("student").src=pics[randomStudent]
- document.getElementsByTagName("img")[0].style.display="";
+ document.getElementById("student").src=pics[randomStudent]
+ document.getElementsByTagName("img")[0].style.display="inline";
 }
 
 let pics9 = [
