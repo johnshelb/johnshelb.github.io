@@ -5,13 +5,13 @@
     <title>Student Flash Cards</title>
     <style media="screen">
       input[type="checkbox"]{
-        transform: scale(2);
+        transform: scale(3);
       }
       #begin{
         color:red;
         transform: scale(4);
-        position:relative;
-        left:20%;
+        position:absolute;
+        top:5%;
       }
       span{
         color:red;
@@ -24,14 +24,14 @@
 
     <h1>Select which grade(s) you want to review</h1>
 
-    <div style="font-size:4vw;">
+    <div style="font-size:5vw;">
       <input type="checkbox" name="9" value="pics9" checked="true"> 9th Grade
       <input type="checkbox" name="10" value="pics10" checked="true"> 10 Grade
       <input type="checkbox" name="11_12" value="pics11_12" checked="true"> 11th and 12th Grade
       <button id="begin" type="button" name="button" onclick="switchUp()">Start</button>
     </div>
 <br>
-    <div  style="font-size:4vw;">
+    <div  style="font-size:8vw;">
        <input type="checkbox" name="rando" checked="true">Randomize
 </div>
   </body>
