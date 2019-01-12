@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Student Flash Cards</title>
+    <style media="screen">
+      input[type="checkbox"]{
+        transform: scale(2);
+      }
+      #begin{
+        color:red;
+        transform: scale(4);
+        position:relative;
+        left:20%;
+      }
+      span{
+        color:red;
+        font-size:18px;
+      }
+    </style>
+  </head>
+  <body style="background-color:aqua">
+      <button style="display:none;"type="button" name="button" onclick="switchUp()">  <img id="student" src="" alt="student"  style="display:none; height:80vh;border-style:solid; border-width:2px;"></button>
+
+    <h1>Select which grade(s) you want to review</h1>
+
+    <div style="font-size:4vw;">
+      <input type="checkbox" name="9" value="pics9" checked="true"> 9th Grade
+      <input type="checkbox" name="10" value="pics10" checked="true"> 10 Grade
+      <input type="checkbox" name="11_12" value="pics11_12" checked="true"> 11th and 12th Grade
+      <button id="begin" type="button" name="button" onclick="switchUp()">Start</button>
+    </div>
+<br>
+    <div  style="font-size:4vw;">
+       <input type="checkbox" name="rando" checked="true">Randomize
+</div>
+  </body>
+
+</html>
+<script>
+let z=-1
+function switchUp(){
+  let n = document.getElementsByTagName("input")[0]
+  let t = document.getElementsByTagName("input")[1]
+  let et = document.getElementsByTagName("input")[2]
+  let rando=document.getElementsByTagName("input")[3]
+
+  if (n.checked && t.checked && et.checked){
+    pics = pics9.concat(pics10).concat(pics11_12)
+  }else if (n.checked && t.checked) {
+    pics = pics9.concat(pics10)
+
+  }else if (n.checked && et.checked){
+    pics = pics9.concat(pics11_12)
+
+  }else if (n.checked){
+    pics = pics9
+
+  }else if (t.checked && et.checked){
+    pics = pics10.concat(pics11_12)
+
+  }else if (t.checked){
+    pics = pics10
+
+  }else if (et.checked){
+    pics = pics11_12
+
+  }
+if (rando.checked){
+ randomStudent = Math.floor(Math.random() * pics.length)
+ document.getElementById("student").src=pics[randomStudent]
+ document.getElementsByTagName("img")[0].style.display="inline";
+ document.getElementsByTagName("button")[0].style.display="inline";
+}
+else{
+  z++
+  if (z>pics.length-1){
+    z=0
+  }
+
+  document.getElementById("student").src=pics[z]
+  document.getElementsByTagName("img")[0].style.display="inline";
+  document.getElementsByTagName("button")[0].style.display="inline";
+console.log(z)
+
+}
+}
+
+let pics9 = [
+"./images/05648-min.jpg",
+"./images/05660-min.jpg",
+"./images/05667-min.jpg",
+"./images/06222-min.jpg",
+"./images/06223-min.jpg",
+"./images/06264-min.jpg",
+"./images/06267-min.jpg",
+"./images/06280-min.jpg",
+"./images/06285-min.jpg",
+"./images/06286-min.jpg",
+"./images/06295-min.jpg",
+"./images/06302-min.jpg",
+"./images/06305-min.jpg",
+"./images/06306-min.jpg",
+"./images/06311-min.jpg",
+]
+
+let pics10=[
+"./images/05627-min.jpg",
+"./images/06107-min.jpg",
+"./images/06134-min.jpg",
+"./images/06135-min.jpg",
+"./images/06147-min.jpg",
+"./images/06152-min.jpg",
+"./images/06156-min.jpg",
+"./images/06157-min.jpg",
+"./images/06158-min.jpg",
+"./images/06164-min.jpg",
+"./images/06165-min.jpg",
+"./images/06170-min.jpg",
+"./images/06175-min.jpg",
+"./images/06182-min.jpg",
+"./images/06188-min.jpg",
+"./images/06193-min.jpg",
+"./images/06211-min.jpg"
+]
+
+let pics11_12=[
+"./images/05956-min.jpg",
+"./images/05642-min.jpg",
+"./images/05586-min.jpg",
+"./images/06084-min.jpg",
+"./images/05615-min.jpg",
+"./images/06077-min.jpg",
+"./images/06074-min.jpg",
+"./images/06054-min.jpg",
+"./images/06020-min.jpg",
+"./images/05997-min.jpg",
+"./images/05983-min.jpg"
+]
+</script>
