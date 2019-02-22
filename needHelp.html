@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign Up for Help</title>
+  </head>
+  <body>
+    <div>
+      <ol id="list">
+
+      </ol>
+    </div>
+    <input type="text" id="name" placeholder="type your name here">
+    <button type="button" name="button" onclick="addToList()">Submit</button>
+    <button id="del" type="button" name="button" style="visibility:hidden;" onclick="deleteFromList()">Delete</button>
+
+    <script type="text/javascript">
+      let helpList=[]
+      function addToList() {
+        let input=document.getElementById("name")
+        let name=input.value
+        if (name==""){
+          return
+        }else if(name=="admin"){
+          document.getElementById('del').style.visibility="visible"
+        }else{
+        helpList.push(name)
+        var htmlString=""
+        helpList.forEach(function(name){htmlString+=`<li>${name}</li>`})
+        document.getElementById("list").innerHTML=htmlString
+      }
+      input.value=""
+    }
+
+
+    function deleteFromList() {
+      let pos=parseInt(document.getElementById("name").value) - 1
+      if (Number.isNaN(pos)){
+        helpList.splice(0,1)
+        var htmlString=""
+        helpList.forEach(function(name){htmlString+=`<li>${name}</li>`})
+        document.getElementById("list").innerHTML=htmlString
+    }else{
+      helpList.splice(pos,1)
+      var htmlString=""
+      helpList.forEach(function(name){htmlString+=`<li>${name}</li>`})
+      document.getElementById("list").innerHTML=htmlString
+    }
+    document.getElementById("name").value=""
+    }
+    </script>
+  </body>
+</html>
