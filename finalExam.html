@@ -1,1 +1,44 @@
-<h1>This is the final exam</h1>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Exam</title>
+    <style media="screen">
+      body{
+        background-color:lightblue;
+      }
+      div{
+        position:relative;
+        width:500px;
+        margin:auto;
+      }
+      button{
+        color:red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 class="joke1">Welcome to the AppDev Final Exam</h1>
+      <h2 class="joke2">This exam will consist of 3 coding problems</h2>
+      <h3 class="joke3">Make sure you solve ALL of the problems--don't leave anything out!</h3>
+      <h1 id="surprise", style="display:none; color:red;font-size:50px;">Ha ha, very funny, no?</h1>
+      <img src="thumbnail.jpg" alt="face" style="display:none">
+
+      <button class="joke4" type="button" name="button" onclick="surprise()">Click here for the test</button>
+    </div>
+    <script type="text/javascript">
+      function surprise(){
+        document.querySelector("#surprise").style.display="block";
+        document.querySelector(".joke1").style.display="none";
+        document.querySelector(".joke2").style.display="none";
+        document.querySelector(".joke3").style.display="none";
+        document.querySelector(".joke4").style.display="none";
+        document.querySelector("img").style.display="inline"
+
+
+      }
+    </script>
+
+  </body>
+</html>
