@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BreathCoach Oval</title>
+    <style media="screen">
+      @keyframes breath{
+        /* 0% {width:10%;height:10vw;background-color:white;}
+        21%{width:100%;height:100%;background-color:green;}
+        58%{width:100%;height:100%;background-color:yellow;}
+        100% {width:10%;height:10vw;background-color:blue;} */
+        0% {width:10%;height:10vw;}
+        21%{width:100%;height:100%;}
+        58%{width:100%;height:100%;}
+        100% {width:10%;height:10vw;}
+
+      }
+
+      @keyframes inhale{
+        0% {font-size:1vw;visibility:visible;}
+        21%{font-size:15vw;visibility:hidden;}
+        58%{font-size:15vw;visibility:hidden;}
+        100% {font-size:1vw;visibility:hidden;}
+      }
+
+      @keyframes pause{
+        0% {visibility:hidden;}
+        21%{font-size:1vw;visibility:hidden;}
+        58%{font-size:15vw;visibility:visible;transform:translateX(-33vw);}
+        59%{font-size:0vw;visibility:hidden;transform:rotateY(0deg);}
+        100% {visibility:hidden;opacity:0;}
+      }
+
+
+      @keyframes exhale{
+        0% {font-size:1vw;visibility:hidden;}
+        21%{font-size:15vw;visibility:hidden;}
+        58%{font-size:15vw;visibility:hidden;}
+        100% {font-size:1vw;visibility:visible;}
+      }
+
+
+      #container{
+        background-color:black;
+        height:100vh;
+        position:relative;
+
+
+      }
+      #ball{
+
+        position:relative;
+        font-size:1em;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+        animation-name: breath;
+        animation-duration: 19s;
+        animation-iteration-count:infinite;
+        animation-timing-function: linear;
+      }
+      .txt1{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        animation-name: inhale;
+        animation-duration: 19s;
+        animation-iteration-count:infinite;
+        animation-timing-function: linear;
+      }
+
+      .txt2{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        transform:rotateY(180deg);
+        animation-name: pause;
+        animation-duration: 19s;
+        animation-iteration-count:infinite;
+        animation-timing-function:linear;
+      }
+
+      .txt3{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        animation-name: exhale;
+        animation-duration: 19s;
+        animation-iteration-count:infinite;
+        animation-timing-function: linear;
+      }
+      .counter{
+        color:red;
+        font-size:5vw;
+        position:absolute;
+        bottom:0%;
+        right:1%;
+      }
+      audio{
+        position: absolute;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id = "container">
+      <audio controls loop>
+        <source src="ocean.mp3" type="audio/mpeg">
+          Your browser does not support the audio tag.
+        </audio>
+      <div class="counter"></div>
+      <div id="ball"></div>
+      <div class="txt1">INHALE</div>
+      <div class="txt2">PAUSE</div>
+      <div class="txt3">EXHALE</div>
+    </div>
+    <script>
+      images = ["theLoch.jpg","fiery_tulips.jpg","tulip_bed.jpg","green_loch.jpg","jewelweed.jpg"]
+      document.getElementsByTagName("audio")[0].play()
+      let count = 1;
+      setInterval(updateCounter,19000);
+      function updateCounter(){
+        document.getElementsByClassName("counter")[0].innerText=`Breath count: ${count}`;
+        document.getElementById("ball").style.backgroundImage=`url(images/${images[(count - 1)%5]})`;
+        count+=1;
+      }
+      updateCounter()
+
+    </script>
+  </body>
+</html>
