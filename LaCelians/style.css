@@ -1,22 +1,3 @@
-/* img{
-  max-width:48vw;
-  height:auto;
-  display:block;
-}
-.item{
-  align-items: center;
-  justify-content: center;
-  color:red;
-}
-#container{
-  display: grid;
-  grid-template-columns:48vw auto;
-  grid-gap:2vw
-}
-@@media query {
-
-} */
-
 img{
   max-width:20vw;
   height:auto;
@@ -38,8 +19,11 @@ img{
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  #container {background: blue;
-  overflow: hidden;}
+  #container {
+    background: blue;
+    width:75vw;
+    grid-template-columns: repeat(2,1fr);
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
