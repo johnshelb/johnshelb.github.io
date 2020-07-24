@@ -20,9 +20,15 @@ img{
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   #container {
-    background: yellow;
-    width:100vw;
+    background: green;
     grid-template-columns: repeat(2,1fr);
+  }
+  img{
+    max-width:45vw;
+  }
+
+  span{
+    font-size: 1em;
   }
 }
 
