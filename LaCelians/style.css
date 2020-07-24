@@ -28,6 +28,7 @@ img{
   font-size:2em
 }
 #container{
+  width:100vw;
   background-color:lightblue;
   display: grid;
   grid-template-columns:repeat(4,1fr);
