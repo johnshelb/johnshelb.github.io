@@ -2,7 +2,9 @@ var alertArray = [];
 window.onload=(()=>{
   DIVS = document.getElementsByTagName("div");
   selected = document.getElementsByTagName("body")[0];
+  msg = document.getElementsByClassName("multimatch")[0]
   input = document.getElementsByTagName("input")[0];
+  input.value="";
   input.addEventListener("click",reset);
 })
 
@@ -11,6 +13,9 @@ function reset(){
   if(selected){
     selected.style.backgroundColor="lightblue";
   }
+  selected = document.getElementsByTagName("body")[0];
+  msg.innerText = "The Faces of La Celia"
+  msg.style.color="lightblue";
   input.value = "";
   for(let i = 0; i < alertArray.length; i++){
     document.getElementById(alertArray[i]).style.backgroundColor="lightblue"
@@ -19,12 +24,14 @@ function reset(){
 }
 
 function search(){
-  let term = document.getElementById("search").value.toLowerCase();
+  let term = document.getElementById("search").value.toLowerCase().trim();
   if(term > 0){//checking to see if the search if for an apartment number
     selected = document.getElementById(term);
     if(selected){
       selected.style.backgroundColor="red";
       selected.scrollIntoView();
+    }else{
+      selected = document.getElementsByTagName("body")[0];
     }
   }else{
     let names = term.split(" ");
@@ -49,8 +56,14 @@ function search(){
         }
       }
       if(alertArray.length > 1){
-        alert("Check apartments " + alertArray)
+        msg.style.color='red';
+        msg.innerText = "Multiple matches! \n Check apartments " + alertArray
+        window.scrollTo(0, 0);
       }
     }
+  }
+  if(selected.tagName == "BODY"){
+    msg.style.color='red';
+    msg.innerText = "No matches!"
   }
 }
