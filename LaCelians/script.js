@@ -13,6 +13,7 @@ window.onload=(()=>{
     event.preventDefault();
     // Trigger the button element with a click
     document.getElementById("myBtn").click();
+    input.value="";
   }
 });
 })
