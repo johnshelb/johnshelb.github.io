@@ -14,6 +14,7 @@ window.onload=(()=>{
     // Trigger the button element with a click
     document.getElementById("myBtn").click();
     input.value="";
+    input.blur();
   }
 });
 })
