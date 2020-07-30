@@ -40,7 +40,7 @@ button{
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 400px) {
   #container {
     grid-template-columns: repeat(2,1fr);
   }
@@ -62,7 +62,7 @@ button{
     background-color: pink;
   }
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 400px) {
   input{
     font-size:.75em;
     color:black;
