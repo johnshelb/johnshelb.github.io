@@ -36,6 +36,7 @@ search{
 button{
   width:10vw;
   margin-right: 1px;
+  background-color: pink;
 
 }
 
@@ -59,38 +60,31 @@ button{
   }
   button{
     font-size: 1em;
-    background-color: pink;
   }
 }
 @media only screen and (min-width: 400px) {
   input{
     font-size:.5em;
-    color:black;
   }
   button{
     font-size: .5em;
-    background-color: pink;
   }
 }
 
 @media only screen and (min-width: 750px) {
   input{
     font-size:1em;
-    color:red;
   }
   button{
     font-size: 1em;
-    background-color: pink;
   }
 }
 
 @media only screen and (min-width: 1250px) {
   input{
     font-size:1.5em;
-    color:green;
   }
   button{
     font-size: 1.75em;
-    background-color: pink;
   }
 }
