@@ -1,0 +1,40 @@
+body{
+  background-color:rgba(145, 194, 209, 1);
+}
+header{
+  background-color:#cfcfcf;
+  margin:-25px;
+  height:100px;
+  position:relative;
+  margin-bottom:55px;
+}
+.name{
+  position:absolute;
+  top:60%;
+  left:5%;
+  transform:translateY(-50%);
+}
+
+.tabs{
+  position:absolute;
+  top:50%;
+  left:60%;
+  transform:translateY(-50%);
+}
+span{
+  margin-left: 150px;
+}
+img{
+     display: block;
+     margin:auto;
+     width:50%;
+    }
+.tab{
+  margin-left:25px;
+}
+p {
+    font-size:200%;
+    font-weight: bold;
+    /* width:25%; */
+    margin:0 auto;
+  }
