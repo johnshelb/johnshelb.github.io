@@ -31,10 +31,9 @@ span{
   margin-right:50px;
 }
 img{
-     display: block;
-     margin:auto;
      width:50%;
     }
+
 .tab{
   margin-left:10px;
 }
@@ -43,3 +42,27 @@ p {
     font-weight: bold;
     margin:0 auto;
   }
+
+middle{
+  display:flex;
+}
+img{
+  border:5px;
+  border-style:solid;
+  border-color:red;
+  margin:auto;
+}
+.red{
+  background-color:red;
+  /* width:200px; */
+  margin:auto;
+  font-size:34px;
+}
+
+.blue{
+  background-color: blue;
+  /* width:200px; */
+  margin:auto;
+  font-size:34px;
+
+}
