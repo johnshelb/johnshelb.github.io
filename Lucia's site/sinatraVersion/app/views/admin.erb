@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Admin</title>
+    <link rel = "stylesheet" href="flexstyle.css">
+  </head>
+  <body>
+    <form action="/admin" method="get">
+      <input type="radio" value="all" name="retrieve" checked="true">
+      <label for="retrieve">All Addresses</label><br>
+      <input type="radio" value="search" name="retrieve">
+      <label for="retrieve">Search by First Name</label><br>
+      <input type="text" placeholder="type first name here" name="firstname">
+      <input type="submit" value="Send">
+    </form>
+
+    <%if @list%>
+      <%if @list.class == Email%>
+        <h2><%=@list.name + ", " + @list.fname + ", " + @list.email%></h2>
+      <%else%>
+        <ul>
+          <%@list.each do |item|%>
+            <li><%=item.name + ", " + item.fname + ":   " + item.email%></li>
+          <%end%>
+        </ul>
+      <%end%>
+    <%end%>
+    <a class="home" href = "./index">Home</a>
+
+  </body>
+</html>

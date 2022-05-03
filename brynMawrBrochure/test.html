@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <style>
+      *{
+          box-sizing:border-box;
+      }
+      html{
+        background:pink;
+        height:100vh;
+        overflow:hidden;
+      }
+      body{
+        height:50%;
+        background:green;
+        margin:0;
+        border: solid black 5px;
+        overflow:hidden;
+      }
+      div{
+        background:red;
+        margin:0;
+      }
+      .one{
+        background:yellow;
+        height:50%;
+      }
+      .con{
+        height:50%;
+        border:solid green;
+        background:purple;
+      }
+      .two{
+        background:blue;
+        height:50%;
+      }
+      .inner{
+        background:black;
+        height:50%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="one">one</div>
+    <div class="con">
+      <div class="two">
+        <div class="inner" style="color:white">inner</div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,171 @@
+*{
+  margin:0;
+}
+
+body{
+  background-color:rgba(145, 194, 209, 1);
+}
+.flex-container{
+  background-color:#cfcfcf;
+  height:100px;
+  margin-bottom:55px;
+  width:100%;
+  display:flex;
+}
+
+.herself{
+  color:red;
+  font-family:cursive;
+  font-size:1.25em;
+}
+.name{
+  margin: auto;
+}
+
+.tabs{
+  margin:auto;
+  font-size: 1em;
+}
+span{
+  margin-left: 150px;
+  margin-right:50px;
+}
+
+
+.tab{
+  margin-left:10px;
+}
+/* p {
+    font-size:2em;
+    font-weight: bold;
+    margin:0 auto;
+  } */
+
+middle{
+  display:flex;
+}
+img{
+  display:block;
+  width:50%;
+  border:5px;
+  border-style:solid;
+  border-color:green;
+  margin:0 auto;
+}
+.red{
+  background-color:red;
+  /* width:200px; */
+  margin:auto;
+  font-size:34px;
+}
+
+.blue{
+  background-color: orange;
+  /* width:200px; */
+  margin:auto;
+  font-size:34px;
+
+}
+.grid-container{
+  background-color:#cfcfcf;
+  width:100%;
+  display:grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+  column-gap: 10%;
+}
+.center{
+  width:14.5%;
+  margin:2% auto;
+}
+.harlem{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  text-align: center;
+}
+
+.himan{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  text-align: center;
+}
+
+.isaac{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  text-align: center;
+}
+
+.virtual{
+  grid-column-start: 4;
+  grid-column-end: 5;
+  text-align: center;
+}
+ul{
+margin:0;
+padding:0;
+}
+
+.harlem > p,.isaac > p,.virtual>p, .himan > p{
+  color:red;
+  font-size: 1em;
+
+}
+
+.home{
+  position: absolute;
+  top:0;
+  right:1%;
+}
+
+.eventHead{
+  width:47%;
+  background-color: blue;
+  margin: 0 auto;
+}
+.eventHead2{
+    width:23%;
+    margin: 0 auto;
+}
+.eventHead3{
+    font-size: 1.5em;
+    font-weight: 900;
+    width:47%;
+    margin: 0 auto;
+  }
+
+.eventFeatures{
+  width:23%;
+  margin: 0 auto;
+  background-color: yellow;
+}
+
+fineprint{
+  position:absolute;
+  bottom:15%;
+  right:3%;
+  display:block;
+  color:red;
+  width:20%;
+  background-color: white;
+  transform:rotate(25deg);
+}
+
+.exhort{
+  font-size: 1.5em;
+  font-weight: bold;
+  width:40%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#bio{
+  font-size: 1.5em;
+  width:75%;
+  margin: 0 auto;
+}
+
+#truth{
+  width:25%;
+  margin: 0 auto;
+}
