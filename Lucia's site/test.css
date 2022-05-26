@@ -1,21 +1,30 @@
-.burger{
-  position:relative;
-  top:10em;
+@keyframes growth{
+  from{width:0em;}
+  to{width:5em;}
+}
+@keyframes darken{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+body{
+  background:black;
+}
+p{
+  color:grey;
+  font-size:10em;
+  width:50%;
+  margin:25% auto;
+  opacity:1;
+  animation-name: darken;
+  animation-duration: 10s;
 }
 
-
-.burger, .burger::before, .burger::after{
-  width:2em;
-  height:12px;
-  background:#333;
+p::before{
+  content:'';
+  display:block;
+  width:5em;
+  height: 3px;
+  background:grey;
+  animation-name: growth;
+  animation-duration: 3s;
 }
-
-.burger::before,
-.burger::after {
-  content: '';
-  position: absolute;
-  left: 0;
-}
-
-.burger::before { bottom: 24px; }
-.burger::after { top: 24px;}
