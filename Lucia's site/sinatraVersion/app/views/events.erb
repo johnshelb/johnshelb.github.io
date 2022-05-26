@@ -1,44 +1,75 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Events</title>
-    <base target="_blank">
-    <link rel = "stylesheet" href="flexstyle.css">
-  </head>
-  <body>
-    <img src="Lucia Ecstatic.jpg" alt="Lucia Ecstatic" style="width:25%">
-    <h1 class="eventHead">Senior Yoga and Meditation Retreat with Lucia!<h1>
-    <h2 class="eventHead2">October 8-10, Stony Point, NY</h2>
-    <br>
-<div id="retreat">
-  <h3 class="eventHead3">Join me for a three-day getaway at the lovely Stony Point Center!</h3>
-<h3 class="eventHead3" style="width:40%">This retreat, designed just for you, will feature:</h3>
-<br>
-  <div class="eventFeatures">
-    <ul>
-    <li>A beautiful, wooded upstate retreat center: <a href="https://stonypointcenter.org">Stony Point</a></li>
-    <li>Your own private room, with bathroom, in a Victorian mansion</li>
-    <li>Accessible yoga (chair- and mat-based), meditation and relaxation offerings each day</li>
-    <li>All meals included, from dinner on Friday through lunch on Sunday</li>
-    </ul>
+<head>
+  <meta charset="utf-8">
+  <title>Events</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel = "stylesheet" href="flexstyle.css">
+</head>
+<body id = 'events'>
+  <div class='titleText'>
+    <p id="truth"> Special Events</p>
+    <div class = "tabs">
+      <span class="tab"><a href="index">Home</a></span>
+      <span class="tab"><a href="about">About Lucia</a></span>
+      <span class="tab"><a href="offerings">Offerings</a></span>
+      <span class="tab"><a href="schedule">Schedule</a></span>
+      <span class="tab"><a href="contact">Contact</a></span>
+    </div>
   </div>
-  <br>
-  <div class="exhort">Now is the time to take a break from daily life, get out into nature and deepen your practice. I have years of experience teaching gentle yoga, meditation and relaxation, and specialize in classes for seniors of all abilities.(Non-seniors are also welcome to this retreat!)
-  <br>
-  I'm so excited to share this opportunity with you!
-  <br>
-  Reach out to me with any questions.
-</div>
-<fineprint>
-  <p>All attendees must be fully vaccinated against Covid-19. </p>
-  <p>Masks are required in shared, public spaces, but optional in our own practice rooms.</p>
-  <p>Retreat center is less than an hour's drive from NYC; also reachable via NJ Transit and a short taxi ride.</p>
-</fineprint>
+
+  <div class='main'>
+    <img src="squidface.jpg" alt="Lucia vs. squid">
+    <h1 class="eventHead">Senior Yoga and Meditation Retreat with Lucia!</h1>
+    <h2 class="eventHead2">June 13-15, Stony Point, NY</h2>
+    <br>
+    <div id="retreat">
+      <h3 class="eventHead3">Join me for a three-day getaway at the lovely Stony Point Center!</h3>
+      <h3 class="eventHead3">This retreat, designed just for you, will feature:</h3>
+      <div class="eventFeatures">
+        <ul>
+          <li>A beautiful, wooded upstate retreat center: <a href="https://stonypointcenter.org" target="_blank"><span class = 'linkSpan'>stonypointcenter.org</span></a></li>
+          <li>Your own private room, with bathroom, in a Victorian mansion</li>
+          <li>Accessible yoga (chair- and mat-based), meditation and relaxation offerings each day</li>
+          <li>All meals included, from dinner on Monday through lunch on Wednesday</li>
+          <li>Beautiful grounds, a labyrinth, hammocks and a fire pit!</li>
+          <li>Group size limited to 14 maximum</li>
+        </ul>
+      </div>
+      <br>
+      <div class="exhort">Now is the time to take a break from daily life, get out into nature and deepen your practice. I have years of experience teaching gentle yoga, meditation and relaxation, and specialize in classes for seniors of all abilities.(Non-seniors are also welcome to this retreat!)
+        <br>
+        I'm so excited to share this opportunity with you!
+        <br>
+        Reach out to me with any questions.
+      </div>
+      <br>
+      <fineprint>
+        <p>All attendees must be vaccinated and boosted against Covid-19. A negative Covid test (within 48 hours) must be shown on arrival.</p>
+        <p>Masks are required in shared, public spaces, but optional in our own practice rooms.</p>
+        <p>Retreat center is less than an hour's drive from NYC; also reachable via NJ Transit and a short taxi ride.</p>
+      </fineprint>
 
 
 
-</div>
-    <a class = "home" href = "./index">Home</a>
-  </body>
+    </div>
+    <div id='overlay'>
+      <button class='nav_toggle' onclick='toggle()'>
+        <span id ="burger" class='burger'></span>
+      </button>
+      <ul id = 'overlayTabs'>
+        <a class='oLtab' href="index">Home</a>
+        <a  class='oLtab' href="about">About Lucia</a>
+        <a class='oLtab' href="offerings">Offerings</a>
+        <a class='oLtab' href="events">Events</a>
+        <a class='oLtab' href="schedule">Schedule</a>
+        <a class='oLtab' href="contact">Contact</a>
+      </ul>
+    </div>
+  </div>
+  <script type="text/javascript" src='index.js'></script>
+
+</body>
 </html>

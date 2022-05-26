@@ -1,195 +1,61 @@
-/* *{
-  margin:0;
-}
-
-body{
-  background-color:rgba(145, 194, 209, 1);
-}
-.flex-container{
-  background-color:#cfcfcf;
-  height:100px;
-  margin-bottom:55px;
-  width:100%;
-  display:flex;
-}
-
-.herself{
-  color:red;
-  font-family:cursive;
-  font-size:1.25em;
-}
-.name{
-  margin: auto;
-}
-
-.tabs{
-  margin:auto;
-  font-size: 1em;
-}
-span{
-  margin-left: 150px;
-  margin-right:50px;
-}
-
-
-.tab{
-  margin-left:10px;
-}
- p {
-    font-size:2em;
-    font-weight: bold;
-    margin:0 auto;
-  }
-
-middle{
-  height:100%;
-  background-image: url('pigeon forward.jpg')
-}
-img{
-  display:block;
-  width:100%;
-  height:100%;
-  border:5px;
-  border-style:solid;
-  border-color:green;
-  margin:0 auto;
-}
-.red{
-  background-color:red;
-  margin:auto;
-  font-size:34px;
-}
-
-.blue{
-  background-color: orange;
-  margin:auto;
-  font-size:34px;
-
-}
-.grid-container{
-  background-color:#cfcfcf;
-  width:100%;
-  display:grid;
-  grid-template-columns: auto auto auto auto;
-  justify-content: center;
-  column-gap: 10%;
-}
-.center{
-  width:14.5%;
-  margin:2% auto;
-}
-.harlem{
-  grid-column-start: 1;
-  grid-column-end: 2;
-  text-align: center;
-}
-
-.himan{
-  grid-column-start: 2;
-  grid-column-end: 3;
-  text-align: center;
-}
-
-.isaac{
-  grid-column-start: 3;
-  grid-column-end: 4;
-  text-align: center;
-}
-
-.virtual{
-  grid-column-start: 4;
-  grid-column-end: 5;
-  text-align: center;
-}
-ul{
-margin:0;
-padding:0;
-}
-
-.harlem > p,.isaac > p,.virtual>p, .himan > p{
-  color:red;
-  font-size: 1em;
-
-}
-
-.home{
-  position: absolute;
-  top:0;
-  right:1%;
-}
-
-.eventHead{
-  width:47%;
-  background-color: blue;
-  margin: 0 auto;
-}
-.eventHead2{
-    width:23%;
-    margin: 0 auto;
-}
-.eventHead3{
-    font-size: 1.5em;
-    font-weight: 900;
-    width:47%;
-    margin: 0 auto;
-  }
-
-.eventFeatures{
-  width:23%;
-  margin: 0 auto;
-  background-color: yellow;
-}
-
-fineprint{
-  position:absolute;
-  bottom:15%;
-  right:3%;
-  display:block;
-  color:red;
-  width:20%;
-  background-color: white;
-  transform:rotate(25deg);
-}
-
-.exhort{
-  font-size: 1.5em;
-  font-weight: bold;
-  width:40%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-#bio{
-  font-size: 1.5em;
-  width:75%;
-  margin: 0 auto;
-}
-
-
-
-
-*/
-#squid{
-  display:block;
-  max-width:90%;
-  margin: 0 auto;
-}
-
 *{
   margin:0;
   box-sizing: border-box;
 }
-
-.landing{
+body{
+  font-family:Cormorant Infant;
+}
+#home{
   background-color:rgba(145, 194, 209, 1);
   height:100vh;
   background-image: url("Lucia Ecstatic.jpg");
   background-repeat:no-repeat;
   background-size: cover;
   background-position: bottom;
-  overflow: hidden;
+}
+#contactPage.contact{
+  background-color:#262626;
+  height:100vh;
+  background-image: url("quill_and_page2.jpg");
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  row-gap:2em;
 }
 
+#contactForm{
+  text-align: center;
+  padding:2em;
+  border-radius: 15px;
+  background-color: #bd8247;
+  opacity:.7;
+  max-width: 85%;
+  margin: 0% auto;
+}
+
+.emailLink{
+  color:purple;
+  font-size: 2em;
+}
+#schedule .emailLink{
+  font-size:1em;
+}
+.emailLink:hover{
+  color:red;
+  transform:scale(5);
+}
+
+#subscribe{
+  font-size: 1em;
+  padding:.5em 1.25em;
+  transition: transform 500ms;
+}
+#subscribe:hover{
+  transform:scale(1.1);
+}
 .herself{
   color:red;
   font-family:cursive;
@@ -204,8 +70,7 @@ header{
   font-size:2rem;
 }
 .tabs{
-  display:flex;
-  visibility: hidden;
+  display:none;
   margin:auto;
   font-size:.5em;
 }
@@ -223,7 +88,6 @@ header{
 .nav_toggle{
   position:absolute;
   left:-34px;
-  top:-30px;
   border:0;
   height:25px;
   background: #1c1c1c;
@@ -256,14 +120,9 @@ header{
  .burger::after{
   bottom:10px;
  }
-
-
-.tab{
-  margin-left:2em;
-  color:white;
-}
-ul{
-  margin-top:30%;
+#events ul{
+  margin-top:10%;
+  list-style-position:inside;
 }
 a{
   text-decoration: none;
@@ -271,8 +130,17 @@ a{
 a:link, a:visited{
   color:#8e8e8e;
 }
+
 a:hover,a.oLtab:hover{
   color:#a433bf
+}
+fineprint{
+  font-size:.7em;
+  text-align:center;
+}
+.linkSpan{
+  transition: transform 1000ms;
+  color:black;
 }
 a.oLtab{
   color:black;
@@ -282,13 +150,17 @@ a.oLtab{
 }
 
 #overlay{
-  position:absolute;
+  top:1rem;
+  right:0;
+  position:fixed;
   transform:translateX(100%);
   height:100vh;
   width:100vw;
   background:#c1c1c1;
-  transition: transform 1000ms ease-in-out
+  transition: transform 1000ms ease-in-out;
+  z-index: 2;
 }
+
 
 .open #overlay{
   transform: translateX(7%);
@@ -304,19 +176,146 @@ a.oLtab{
   transform: rotate(90deg) translate(-10px);
 
 }
-#contact{
+input{
+  background:#d3ba56;
+}
+#offerings, #about, #events, #contactPage, #home{
+  /* height:150vh; */
+  overflow-x: hidden;
+}
+.container{
   display:flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 }
-#form{
+#offerings_photo{
+  display:block;
+  margin:0 auto;
+  width:100%;
+}
 
+#offerings .container a, #schedule .main a{
+  color:#5d413d;
+  transition:transform 2000ms;
 }
+#schedule .main a{
+  color:#5d413d;
+  font-weight: bold;
+}
+#offerings .container a:hover, #schedule .main a:hover{
+  color:red;
+}
+.schedLink{
+  margin-left:50%;
+  transform:translateX(-50%);
+  padding-bottom:2em;
+}
+.titleText{
+  font-size:3em;
+  color:white;
+  background:#1c1c1c;
+  text-align: center;
+  padding:.3em;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index: 1;
+}
+
+.desc span{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.desc{
+  font-size:2em;
+  background:grey;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+}
+.descText{
+  padding:1em 2em 2em;
+}
+
+
+
+#about .main, #events .main{
+  text-align: center;
+  background:grey;
+  padding:2em;
+}
+
+#about img, #events img{
+  display:block;
+  width:100%;
+  margin:0 auto;
+  margin-bottom:2em;
+}
+
+#bio{
+  width:80%;
+  font-size:3em;
+  margin:0 auto;
+}
+#retreat{
+  font-size: 2em;
+  padding:2em;
+}
+
+.linkSpan:hover{
+  color:red;
+}
+.eventHead{
+  font-size: 3.5em;
+}
+
+.eventHead2{
+  font-size: 2.5em;
+}
+
+#contactPage .main{
+  padding-top:10em;
+}
+#about .main,#events .main{
+ padding-top:25%;
+}
+#schedule{
+  background:#5d413d;
+}
+
+#schedule .main{
+  padding:7rem 2rem 1rem;
+}
+.skedType{
+  background: #5e96aa;
+  /* border:solid black; */
+  border-radius: 25px;
+  margin-bottom:2em;
+  padding:2em;
+}
+
+.skedType:last-child{
+  margin-bottom:0;
+}
+
 @media (min-width:501px) {
+  /* .home{
+    visibility: visible;
+    border-radius: 50%;
+    background: #caa34e;
+    padding:.5em .7em;
+    position:absolute;
+    font-size: 2em;
+    top:1em;
+    left:1em;
+    color:#79493c;
+    transition: transform 500ms;
+  } */
   header{
     display:flex;
     align-items:center;
-    justify-content: space-around;
     width:50%;
     justify-content: flex-start;
   }
@@ -324,9 +323,15 @@ a.oLtab{
     visibility: hidden;
   }
   .tabs{
-    margin-left: auto;
-    margin-right: 1.5em;
+    display:flex;
+    justify-content: flex-end;
+    color:grey;
+    margin-right: 1em;
     visibility:visible;
+  }
+  .tab{
+    font-size:1rem;
+    margin-left:1.4em;
   }
   .headText{
     margin-left:2rem;
@@ -336,4 +341,82 @@ a.oLtab{
     transform:translateX(100%);
     transition:transform 0s;
   }
+
+/*offerings page*/
+
+  .container{
+
+    margin-top:-150px;
+    /* height:100vh; */
+    background: #1c1c1c;
+    display:grid;
+    grid-template-columns:   1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-row-gap:1em;
+    grid-template-areas:
+      "chair chairDesc"
+      "hatha hathaDesc"
+      "rstrtv rstrtvDesc"
+      "med    medDesc";
+    align-items: center;
+    }
+
+  .chair{grid-area:chair}
+  .chairDesc{grid-area:chairDesc}
+  .hatha{grid-area:hatha}
+  .hathaDesc{grid-area:hathaDesc}
+  .rstrtv{grid-area:rstrtv}
+  .rstrtvDesc{grid-area:rstrtvDesc}
+  .med{grid-area:med}
+  .medDesc{grid-area:medDesc}
+
+  .container img{
+    width:100%;
+    height:100%;
+  }
+  .desc span{
+    font-size: 2.5em;
+  }
+
+  .main{
+    position:relative;
+    top:10%;
+  }
+  .titleText{
+    font-size:5em;
+  }
+
+  #about img, #events img{
+    width:35%;
+  }
+  #about .main, #events .main{
+    padding-top:15%;
+  }
+  #schedule .main{
+    /* top:25%; */
+  }
+
+  #contactPage h2{
+    font-size: 3em;
+  }
+
+  #contactPage form{
+    font-size: 1.5em;
+  }
+
+  #schedule .main{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    font-size: 1.25em;
+  }
+  #schedule h2{
+    text-align: center;
+  }
+
+  #schedule .main, #contactPage .main{
+    padding-top:10em;
+    column-gap:2em;
+  }
+
 }
