@@ -2,26 +2,25 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>About Lucia</title>
+    <title>Contact Information</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel = "stylesheet" href="flexstyle.css">
   </head>
-  <body id="about">
+  <body id="contactPage"  class="contact">
     <div class='titleText'>
-      <p id="truth">Good Sweet!</p>
+      <p>Let's Keep in Touch!</p>
+
       <div class = "tabs">
         <span class="tab"><a href="index.html">Home</a></span>
+        <span class="tab"><a href="about.html">About Lucia</a></span>
         <span class="tab"><a href="offerings.html">Offerings</a></span>
         <span class="tab"><a href="events.html">Events</a></span>
         <span class="tab"><a href="schedule.html">Schedule</a></span>
-        <span class="tab"><a href="contact.html">Contact</a></span>
       </div>
     </div>
 
-    <div class = 'main'>
-    <img src="images/headOnLu.jpg" alt='Lucia'>
     <div id='overlay'>
       <button class='nav_toggle' onclick='toggle()'>
         <span id ="burger" class='burger'></span>
@@ -35,9 +34,30 @@
         <a class='oLtab' href="contact.html">Contact</a>
       </ul>
     </div>
-    <p id="bio">For Lucia, yoga is a means of self-expression and cultivating compassionate self-awareness. She completed a 200-hour teacher training at Kripalu Center for Yoga & Health in 2013 and is certified to teach Trauma-Informed Yoga by Exhale to Inhale. Before becoming a yoga teacher, she lived and worked as a social worker in East Harlem for 18 years. Lucia has taught yoga to teen girls, seniors, immigrant mothers and her neighbors, and is thrilled to be part of the yoga community. </p>
-    </div>
-    <script type="text/javascript" src='index.js'></script>
+
+    <div id = 'contactForm' class='contact main'>
+      <h2>Questions? Comments? Want to explore private sessions? Just want to say hi?  Email me!</h2>
+      <a  href = "mailto: jsnd11@gmail.com"><span class="emailLink">Send Email</span></a>
+      <br>
+      <br>
+      <h2>Sign up for my email list!</h2>
+      <p class = 'fineprint'>(I send out an occassional newsletter.  You can unsubscribe at any time.  I will never sell or share your information.)</p>
+      <br>
+      <form id = "addEmail" method = "POST" action = "/addEmail">
+         <label for="fname">First name:</label>
+         <input type="text" id="fname" name="fname" placeholder="first name"><br>
+<br>
+         <label for="lname">Last name:</label>
+         <input type="text" id="lname" name="lname" placeholder="last name"><br>
+<br>
+         <label for="email">Email:</label>
+         <input type="email" id="email" name="email" placeholder="email@isp.com"><br>
+<br>
+         <input id='subscribe' type="submit" value="Subscribe">
+      </form>
+
+  </div>
+  <script type="text/javascript" src='index.js'></script>
 
   </body>
 </html>

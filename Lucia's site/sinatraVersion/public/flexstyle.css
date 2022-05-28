@@ -38,10 +38,13 @@ body{
 
 .emailLink{
   color:purple;
-  font-size: 2em;
+  font-size: 1em;
 }
 #schedule .emailLink{
   font-size:1em;
+}
+#contactPage .emailLink{
+  font-size:2em;
 }
 .emailLink:hover{
   color:red;

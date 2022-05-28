@@ -3,29 +3,42 @@
   <head>
     <meta charset="utf-8">
     <title>Lucia Russett's OM page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel = "stylesheet" href="flexstyle.css">
 
   <base target="_self">
   </head>
-  <body>
-    <header class="flex-container">
-        <p class="name">
-          <b><span class="herself name">Lucia Russett</span>
-            <span>Yoga & Meditation</span>
-          </b>
-        </p>
-        <span class = "tabs">
-            <span class="tab"><a href="schedule.html">Schedule</a></span>
-            <span class="tab"><a href="about.html">About Lucia</a></span>
-            <span class="tab"><a href="contact.html">Contact</a></span>
-            <span class="tab"><a href="events.html">Events</a></span>
-        </span>
-    </header>
-    <middle>
-      <!-- <div class = "red">Here I am</div> -->
-      <!-- <img id='homepic' src="Lucia Ecstatic.jpg" alt="Lucia Ecstatic" title="Lucia Ecstatic"> -->
-      <!-- <div class = "blue">Here WE are</div> -->
-    </middle>
+  <body id="home">
+    <header>
+        <div class='headText'>
+          <p class="herself">Lucia Russett</p>
+          <p class='light'>Yoga & Meditation</p>
+        </div>
 
+        <div class = "tabs">
+          <span class="tab"><a href="about.html">About Lucia</a></span>
+          <span class="tab"><a href="offerings.html">Offerings</a></span>
+          <span class="tab"><a href="events.html">Events</a></span>
+          <span class="tab"><a href="schedule.html">Schedule</a></span>
+          <span class="tab"><a href="contact.html">Contact</a></span>
+        </div>
+    </header>
+    <div id='overlay'>
+      <button class='nav_toggle' onclick='toggle()'>
+        <span id ="burger" class='burger'></span>
+      </button>
+      <ul id = 'overlayTabs'>
+        <a class='oLtab' href="index.html">Home</a>
+        <a  class='oLtab' href="about.html">About Lucia</a>
+        <a class='oLtab' href="offerings.html">Offerings</a>
+        <a class='oLtab' href="events.html">Events</a>
+        <a class='oLtab' href="schedule.html">Schedule</a>
+        <a class='oLtab' href="contact.html">Contact</a>
+    </ul>
+    </div>
+
+<script type="text/javascript" src='index.js'></script>
   </body>
 </html>
