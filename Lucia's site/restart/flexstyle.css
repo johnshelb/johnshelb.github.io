@@ -303,7 +303,7 @@ input{
   margin-bottom:0;
 }
 
-@media (min-width:721px) {
+@media (min-width:1500px) {
   /* .home{
     visibility: visible;
     border-radius: 50%;
