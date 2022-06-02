@@ -5,18 +5,24 @@
 body{
   font-family:Cormorant Infant;
 }
+
+#schedule, #about, #event, #offerings, #home,#contact{
+  background:#5d413d;
+}
+
 #home{
-  background-color:rgba(145, 194, 209, 1);
+  /* background-color:rgba(145, 194, 209, 1); */
   height:100vh;
-  background-image: url("images/Lucia Ecstatic.jpg");
+  background-image: url("Lucia Ecstatic.jpg");
   background-repeat:no-repeat;
   background-size: cover;
   background-position: bottom;
 }
+
 #contactPage.contact{
-  background-color:#262626;
+  /* background-color:#262626; */
   height:100vh;
-  background-image: url("images/quill_and_page2.jpg");
+  background-image: url("quill_and_page2.jpg");
   background-repeat:no-repeat;
   background-size: cover;
   background-position:center;
@@ -30,11 +36,14 @@ body{
   text-align: center;
   padding:2em;
   border-radius: 15px;
-  background-color: #bd8247;
+  /* background-color: #bd8247; */
   opacity:.7;
   max-width: 85%;
   margin: 0% auto;
 }
+
+
+
 
 .emailLink{
   color:purple;
@@ -183,7 +192,6 @@ input{
   background:#d3ba56;
 }
 #offerings, #about, #events, #contactPage, #home{
-  /* height:150vh; */
   overflow-x: hidden;
 }
 .container{
@@ -284,9 +292,7 @@ input{
 #about .main,#events .main{
  padding-top:25%;
 }
-#schedule{
-  background:#5d413d;
-}
+
 
 #schedule .main{
   padding:7rem 2rem 1rem;
