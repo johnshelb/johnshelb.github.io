@@ -60,7 +60,7 @@ body{
   transform:scale(1.1);
 }
 .herself{
-  color:white;
+  color:red;
   font-family:cursive;
 }
 
@@ -303,7 +303,7 @@ input{
   margin-bottom:0;
 }
 
-@media screen and (min-width:665px) {
+@media (min-width:167px) {
   /* .home{
     visibility: visible;
     border-radius: 50%;
