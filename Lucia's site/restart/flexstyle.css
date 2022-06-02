@@ -47,7 +47,7 @@ body{
   font-size:2em;
 }
 .emailLink:hover{
-  color:red;
+  color:white;
   transform:scale(5);
 }
 
@@ -303,7 +303,7 @@ input{
   margin-bottom:0;
 }
 
-@media (min-width:167px) {
+@media (min-width:1167px) {
   /* .home{
     visibility: visible;
     border-radius: 50%;
