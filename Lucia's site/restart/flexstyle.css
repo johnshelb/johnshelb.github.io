@@ -47,7 +47,7 @@ body{
   font-size:2em;
 }
 .emailLink:hover{
-  color:white;
+  color:red;
   transform:scale(5);
 }
 
@@ -60,7 +60,7 @@ body{
   transform:scale(1.1);
 }
 .herself{
-  color:red;
+  color:white;
   font-family:cursive;
 }
 
