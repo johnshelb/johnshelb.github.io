@@ -306,18 +306,6 @@ li{
   font-size:.5em;
 }
 @media (min-width:1167px) {
-  /* .home{
-    visibility: visible;
-    border-radius: 50%;
-    background: #caa34e;
-    padding:.5em .7em;
-    position:absolute;
-    font-size: 2em;
-    top:1em;
-    left:1em;
-    color:#79493c;
-    transition: transform 500ms;
-  } */
   li{
     font-size: 1em;
   }
