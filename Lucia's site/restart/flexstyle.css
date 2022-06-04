@@ -1,9 +1,7 @@
+/* Layout */
 *{
   margin:0;
   box-sizing: border-box;
-}
-body{
-  font-family:Cormorant Infant;
 }
 #home{
   background-color:rgba(145, 194, 209, 1);
@@ -36,57 +34,22 @@ body{
   margin: 0% auto;
 }
 
-.emailLink{
-  color:purple;
-  font-size: 1em;
-}
-#schedule .emailLink{
-  font-size:1em;
-}
-#contactPage .emailLink{
-  font-size:2em;
-}
-.emailLink:hover{
-  color:red;
-  transform:scale(5);
-}
-
-#subscribe{
-  font-size: 1em;
-  padding:.5em 1.25em;
-  transition: transform 500ms;
-}
-#subscribe:hover{
-  transform:scale(1.1);
-}
-.herself{
-  color:red;
-  font-family:cursive;
-}
-
 header{
   position:relative;
   width: 100%;
   margin:0 auto;
   text-align: center;
   background: #1c1c1c;
-  font-size:2rem;
 }
 .tabs{
   display:none;
   margin:auto;
-  font-size:.5em;
 }
 
 .headText{
   margin-left: 50%;
   transform: translateX(-50%);
 }
-
-.light{
-  color:white;
-}
-
 
 .nav_toggle{
   position:absolute;
@@ -95,10 +58,7 @@ header{
   height:25px;
   background: #1c1c1c;
 }
-.nav_toggle:hover{
-  transform:scale(105%);
-  background: #a433bf;
-}
+
 .burger{
   color:#fff;
   position:relative;
@@ -127,6 +87,156 @@ header{
   margin-top:10%;
   list-style-position:inside;
 }
+
+#overlay{
+  top:1rem;
+  right:0;
+  position:fixed;
+  transform:translateX(100%);
+  height:100vh;
+  width:100vw;
+  background:#c1c1c1;
+  transition: transform 750ms ease-in-out;
+  z-index: 2;
+}
+
+.open #overlay{
+  transform: translateX(7%);
+  opacity:90%;
+}
+.open .burger{
+  transform:rotate(45deg);
+}
+.open .burger::after{
+  visibility:hidden;
+}
+.open .burger::before{
+  transform: rotate(90deg) translate(-10px);
+
+}
+input{
+  background:#d3ba56;
+}
+#offerings, #about, #events, #contactPage, #home{
+  overflow-x: hidden;
+}
+.container{
+  display:flex;
+  flex-direction: column;
+}
+#offerings_photo{
+  display:block;
+  margin:0 auto;
+  width:100%;
+}
+.schedLink{
+  margin-left:50%;
+  transform:translateX(-50%);
+  padding-bottom:2em;
+}
+.titleText{
+  background:#1c1c1c;
+  text-align: center;
+  padding:.3em;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index: 1;
+}
+
+.desc{
+  background:grey;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+}
+.descText{
+  padding:1em 2em 2em;
+}
+#about .main, #events .main{
+  text-align: center;
+  background:grey;
+  padding:2em;
+}
+
+#about img, #events img{
+  display:block;
+  width:100%;
+  margin:0 auto;
+  margin-bottom:2em;
+}
+
+#contactPage .main{
+  padding-top:10em;
+}
+#about .main,#events .main{
+ padding-top:25%;
+}
+#schedule{
+  background:#5d413d;
+}
+
+#schedule .main{
+  padding:12rem 2rem 1rem;
+}
+.skedType{
+  background: #5e96aa;
+  border-radius: 25px;
+  margin-bottom:2em;
+  padding:2em;
+}
+
+.skedType:last-child{
+  margin-bottom:0;
+}
+
+
+/* Typography */
+body{
+  font-family:Cormorant Infant;
+}
+.main {
+  line-height: 1.6;
+}
+.emailLink{
+  color:#5d413d;
+  font-size: 1em;
+}
+#schedule .emailLink{
+  font-size:1em;
+}
+#contactPage .emailLink{
+  font-size:2.5em;
+  font-weight:bold;
+}
+.emailLink:hover{
+  color:red;
+  transform:scale(5);
+}
+
+#subscribe{
+  font-size: 1em;
+  padding:.5em 1.25em;
+  transition: transform 500ms;
+}
+#subscribe:hover{
+  transform:scale(1.1);
+}
+.herself{
+  color:red;
+  font-family:cursive;
+}
+header{
+  font-size:2rem;
+}
+.tabs{
+  font-size:.5em;
+}
+.light{
+  color:white;
+}
 a{
   text-decoration: none;
 }
@@ -151,54 +261,8 @@ a.oLtab{
   margin-bottom:2em;
   display:block;
 }
-
-#overlay{
-  top:1rem;
-  right:0;
-  position:fixed;
-  transform:translateX(100%);
-  height:100vh;
-  width:100vw;
-  background:#c1c1c1;
-  transition: transform 1000ms ease-in-out;
-  z-index: 2;
-}
-
-
-.open #overlay{
-  transform: translateX(7%);
-  opacity:90%;
-}
-.open .burger{
-  transform:rotate(45deg);
-}
-.open .burger::after{
-  visibility:hidden;
-}
-.open .burger::before{
-  transform: rotate(90deg) translate(-10px);
-
-}
-input{
-  background:#d3ba56;
-}
-#offerings, #about, #events, #contactPage, #home{
-  /* height:150vh; */
-  overflow-x: hidden;
-}
-.container{
-  display:flex;
-  flex-direction: column;
-}
-#offerings_photo{
-  display:block;
-  margin:0 auto;
-  width:100%;
-}
-
 #offerings .container a, #schedule .main a{
   color:#5d413d;
-  transition:transform 2000ms;
 }
 #schedule .main a{
   color:#5d413d;
@@ -207,108 +271,42 @@ input{
 #offerings .container a:hover, #schedule .main a:hover{
   color:red;
 }
-.schedLink{
-  margin-left:50%;
-  transform:translateX(-50%);
-  padding-bottom:2em;
-}
 .titleText{
   font-size:3em;
   color:white;
-  background:#1c1c1c;
-  text-align: center;
-  padding:.3em;
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  z-index: 1;
 }
-
 .desc span{
   font-size: 1.5em;
   font-weight: bold;
 }
-
-.desc{
-  /* font-size:2em; */
-  background:grey;
-  height:100%;
-  display:flex;
-  flex-direction:column;
-  justify-content: center;
-}
-.descText{
-  padding:1em 2em 2em;
-}
-
-
-
-#about .main, #events .main{
-  text-align: center;
-  background:grey;
-  padding:2em;
-}
-
-#about img, #events img{
-  display:block;
-  width:100%;
-  margin:0 auto;
-  margin-bottom:2em;
-}
-
 #bio{
   width:80%;
-  font-size:3em;
+  font-size:1.5em;
   margin:0 auto;
 }
 #retreat{
-  font-size: 2em;
-  padding:2em;
+  padding:1.25em;
 }
 
 .linkSpan:hover{
   color:red;
 }
 .eventHead{
-  font-size: 3.5em;
+  font-size: 2em;
 }
 
 .eventHead2{
-  font-size: 2.5em;
+  font-size: 1.5em;
 }
 
-#contactPage .main{
-  padding-top:10em;
-}
-#about .main,#events .main{
- padding-top:25%;
-}
-#schedule{
-  background:#5d413d;
+#events li{
+  font-size:.75em;
 }
 
-#schedule .main{
-  padding:7rem 2rem 1rem;
-}
-.skedType{
-  background: #5e96aa;
-  /* border:solid black; */
-  border-radius: 25px;
-  margin-bottom:2em;
-  padding:2em;
-}
 
-.skedType:last-child{
-  margin-bottom:0;
-}
-li{
-  font-size:.5em;
-}
 @media (min-width:1167px) {
-  li{
-    font-size: 1em;
-  }
+  /* Layout */
+
   header{
     display:flex;
     align-items:center;
@@ -325,10 +323,7 @@ li{
     margin-right: 1em;
     visibility:visible;
   }
-  .tab{
-    font-size:1rem;
-    margin-left:1.4em;
-  }
+
   .headText{
     margin-left:2rem;
     transform:none;
@@ -341,9 +336,7 @@ li{
 /*offerings page*/
 
   .container{
-
     margin-top:-150px;
-    /* height:100vh; */
     background: #1c1c1c;
     display:grid;
     grid-template-columns:   1fr 1fr;
@@ -370,20 +363,12 @@ li{
     width:100%;
     height:100%;
   }
-  .desc{
-    font-size:1.5em;
-  }
-  .desc span{
-    /* font-size: 2.5em; */
-  }
 
   .main{
     position:relative;
     top:10%;
   }
-  .titleText{
-    font-size:5em;
-  }
+
 
   #about img, #events img{
     width:35%;
@@ -391,23 +376,11 @@ li{
   #about .main, #events .main{
     padding-top:15%;
   }
-  #schedule .main{
-    /* top:25%; */
-  }
-
-  #contactPage h2{
-    font-size: 3em;
-  }
-
-  #contactPage form{
-    font-size: 1.5em;
-  }
 
   #schedule .main{
     display: flex;
     flex-wrap:wrap;
     justify-content: center;
-    font-size: 1.25em;
   }
   #schedule h2{
     text-align: center;
@@ -418,4 +391,32 @@ li{
     column-gap:2em;
   }
 
+  /* Typography */
+  li{
+    font-size: 1em;
+  }
+
+  .tab{
+    font-size:1rem;
+    margin-left:1.4em;
+  }
+  .desc{
+    font-size:1.5em;
+  }
+  .titleText{
+    font-size:5em;
+  }
+  #contactPage h2{
+    font-size: 3em;
+  }
+
+  #contactPage form{
+    font-size: 1.5em;
+  }
+  #schedule .main{
+    font-size:1.25em;
+  }
+  #retreat{
+    font-size:2em;
+  }
 }
