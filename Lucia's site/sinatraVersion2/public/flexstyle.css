@@ -1,17 +1,14 @@
+/*LAYOUT*/
 *{
   margin:0;
   box-sizing: border-box;
 }
-body{
-  font-family:Cormorant Infant;
-}
-
-#schedule, #about, #event, #offerings, #home,#contact{
-  background:#5d413d;
-}
+              body{
+                font-family:Cormorant Infant;
+                background:#5d413d;
+              }
 
 #home{
-  /* background-color:rgba(145, 194, 209, 1); */
   height:100vh;
   background-image: url("Lucia Ecstatic.jpg");
   background-repeat:no-repeat;
@@ -19,8 +16,7 @@ body{
   background-position: bottom;
 }
 
-#contactPage.contact{
-  /* background-color:#262626; */
+#contactPage{
   height:100vh;
   background-image: url("quill_and_page2.jpg");
   background-repeat:no-repeat;
@@ -36,30 +32,51 @@ body{
   text-align: center;
   padding:2em;
   border-radius: 15px;
-  /* background-color: #bd8247; */
   opacity:.7;
   max-width: 85%;
   margin: 0% auto;
 }
 
-
-
-
-.emailLink{
-  color:purple;
+/* begin links */
+a{
+  text-decoration: none;
+}
+.titleText a:link, .titleText a:visited{
+  color:#8e8e8e;
+}
+#schedule .main a:link, #schedule .main a:visited{
+  color:yellow;
   font-size: 1em;
 }
-#schedule .emailLink{
-  font-size:1em;
+.titleText a:hover, #schedule .main a:visited:hover, #schedule .main a:link:hover{
+  color:#a433bf
 }
+
+
 #contactPage .emailLink{
   font-size:2em;
 }
-.emailLink:hover{
-  color:red;
-  transform:scale(5);
+.linkSpan{
+  transition: transform 1000ms;
+  color:black;
+}
+a.oLtab{
+  color:black;
+  font-size: 2em;
+  margin-bottom:2em;
+  display:block;
 }
 
+.schedLink{
+  margin-left:50%;
+  transform:translateX(-50%);
+  padding-bottom:2em;
+}
+
+.linkSpan:hover{
+  color:red;
+}
+/* end links */
 #subscribe{
   font-size: 1em;
   padding:.5em 1.25em;
@@ -88,14 +105,10 @@ header{
 }
 
 .headText{
+  color:white;
   margin-left: 50%;
   transform: translateX(-50%);
 }
-
-.light{
-  color:white;
-}
-
 
 .nav_toggle{
   position:absolute;
@@ -105,8 +118,8 @@ header{
   background: #1c1c1c;
 }
 .nav_toggle:hover{
-  transform:scale(105%);
-  background: #a433bf;
+  transform:scale(110%);
+  cursor:pointer;
 }
 .burger{
   color:#fff;
@@ -136,29 +149,10 @@ header{
   margin-top:10%;
   list-style-position:inside;
 }
-a{
-  text-decoration: none;
-}
-a:link, a:visited{
-  color:#8e8e8e;
-}
 
-a:hover,a.oLtab:hover{
-  color:#a433bf
-}
 fineprint{
   font-size:.7em;
   text-align:center;
-}
-.linkSpan{
-  transition: transform 1000ms;
-  color:black;
-}
-a.oLtab{
-  color:black;
-  font-size: 2em;
-  margin-bottom:2em;
-  display:block;
 }
 
 #overlay{
@@ -204,24 +198,9 @@ input{
   width:100%;
 }
 
-#offerings .container a, #schedule .main a{
-  color:#5d413d;
-  transition:transform 2000ms;
-}
-#schedule .main a{
-  color:#5d413d;
-  font-weight: bold;
-}
-#offerings .container a:hover, #schedule .main a:hover{
-  color:red;
-}
-.schedLink{
-  margin-left:50%;
-  transform:translateX(-50%);
-  padding-bottom:2em;
-}
+
 .titleText{
-  font-size:3em;
+  font-size:1.5em;
   color:white;
   background:#1c1c1c;
   text-align: center;
@@ -239,7 +218,7 @@ input{
 }
 
 .desc{
-  font-size:2em;
+  /* font-size:2em; */
   background:grey;
   height:100%;
   display:flex;
@@ -275,9 +254,7 @@ input{
   padding:2em;
 }
 
-.linkSpan:hover{
-  color:red;
-}
+
 .eventHead{
   font-size: 3.5em;
 }
@@ -299,7 +276,6 @@ input{
 }
 .skedType{
   background: #5e96aa;
-  /* border:solid black; */
   border-radius: 25px;
   margin-bottom:2em;
   padding:2em;
@@ -350,7 +326,6 @@ li{
   .container{
 
     margin-top:-150px;
-    /* height:100vh; */
     background: #1c1c1c;
     display:grid;
     grid-template-columns:   1fr 1fr;
@@ -377,8 +352,11 @@ li{
     width:100%;
     height:100%;
   }
+  .desc{
+    font-size:1.5em;
+  }
   .desc span{
-    font-size: 2.5em;
+    /* font-size: 2.5em; */
   }
 
   .main{
@@ -386,7 +364,7 @@ li{
     top:10%;
   }
   .titleText{
-    font-size:5em;
+    font-size:3em;
   }
 
   #about img, #events img{
@@ -394,9 +372,6 @@ li{
   }
   #about .main, #events .main{
     padding-top:15%;
-  }
-  #schedule .main{
-    /* top:25%; */
   }
 
   #contactPage h2{
