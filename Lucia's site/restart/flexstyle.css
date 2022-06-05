@@ -13,7 +13,7 @@
 }
 #contactPage.contact{
   background-color:#262626;
-  height:100vh;
+  height:150vh;
   background-image: url("images/quill_and_page2.jpg");
   background-repeat:no-repeat;
   background-size: cover;
@@ -239,6 +239,7 @@ header{
 }
 a{
   text-decoration: none;
+  font-weight:bold;
 }
 a:link, a:visited{
   color:#8e8e8e;
@@ -261,14 +262,13 @@ a.oLtab{
   margin-bottom:2em;
   display:block;
 }
-#offerings .container a, #schedule .main a{
+#offerings .container a, #schedule .main a, #events .main a{
   color:#5d413d;
 }
 #schedule .main a{
-  color:#5d413d;
   font-weight: bold;
 }
-#offerings .container a:hover, #schedule .main a:hover{
+#offerings .container a:hover, #schedule .main a:hover, #events .main a:hover{
   color:red;
 }
 .titleText{
