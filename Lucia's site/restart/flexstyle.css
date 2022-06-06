@@ -97,7 +97,7 @@ header{
   width:100vw;
   background:#c1c1c1;
   transition: transform 750ms ease-in-out;
-  z-index: 2;
+  z-index: 1;
 }
 
 .open #overlay{
@@ -117,14 +117,14 @@ header{
 input{
   background:#d3ba56;
 }
-#offerings, #about, #events, #contactPage, #home{
+body{
   overflow-x: hidden;
 }
 .container{
   display:flex;
   flex-direction: column;
 }
-#offerings_photo{
+#offerings_photo, #about img, #events img{
   display:block;
   margin:0 auto;
   width:100%;
@@ -162,9 +162,6 @@ input{
 }
 
 #about img, #events img{
-  display:block;
-  width:100%;
-  margin:0 auto;
   margin-bottom:2em;
 }
 
@@ -197,23 +194,30 @@ input{
 body{
   font-family:Cormorant Infant;
 }
+a{
+  text-decoration: none;
+  font-weight:bold;
+}
+a:link, a:visited{
+  color:#8e8e8e;
+}
+
+a:hover,a.oLtab:hover{
+  color:#a433bf
+}
 .main {
   line-height: 1.6;
 }
-.emailLink{
-  color:#5d413d;
-  font-size: 1em;
-}
-#schedule .emailLink{
-  font-size:1em;
-}
-#contactPage .emailLink{
+
+
+a.emailLink{
   font-size:2.5em;
   font-weight:bold;
+  color:#5d413d;
 }
+
 .emailLink:hover{
-  color:red;
-  transform:scale(5);
+  color:#a433bf;;
 }
 
 #subscribe{
@@ -237,25 +241,12 @@ header{
 .light{
   color:white;
 }
-a{
-  text-decoration: none;
-  font-weight:bold;
-}
-a:link, a:visited{
-  color:#8e8e8e;
-}
 
-a:hover,a.oLtab:hover{
-  color:#a433bf
-}
 fineprint{
   font-size:.7em;
   text-align:center;
 }
-.linkSpan{
-  transition: transform 1000ms;
-  color:black;
-}
+
 a.oLtab{
   color:black;
   font-size: 2em;
@@ -265,15 +256,14 @@ a.oLtab{
 #offerings .container a, #schedule .main a, #events .main a{
   color:#5d413d;
 }
-#schedule .main a{
-  font-weight: bold;
-}
 #offerings .container a:hover, #schedule .main a:hover, #events .main a:hover{
   color:red;
 }
 .titleText{
   font-size:3em;
-  color:white;
+}
+.descText{
+  font-size:1.25em
 }
 .desc span{
   font-size: 1.5em;
@@ -288,9 +278,6 @@ a.oLtab{
   padding:1.25em;
 }
 
-.linkSpan:hover{
-  color:red;
-}
 .eventHead{
   font-size: 2em;
 }
@@ -332,8 +319,6 @@ a.oLtab{
     transform:translateX(100%);
     transition:transform 0s;
   }
-
-/*offerings page*/
 
   .container{
     margin-top:-150px;
@@ -400,7 +385,7 @@ a.oLtab{
     font-size:1rem;
     margin-left:1.4em;
   }
-  .desc{
+  .descText{
     font-size:1.5em;
   }
   .titleText{

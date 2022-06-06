@@ -10,7 +10,7 @@
   <link rel = "stylesheet" href="flexstyle.css">
 </head>
 <body id = 'events'>
-  <div class='titleText'>
+  <div class='titleText light'>
     <p id="truth"> Special Events</p>
     <div class = "tabs">
       <span class="tab"><a href="index.html">Home</a></span>
@@ -20,7 +20,19 @@
       <span class="tab"><a href="contact.html">Contact</a></span>
     </div>
   </div>
-
+  <div id='overlay'>
+    <button class='nav_toggle' onclick='toggle()'>
+      <span id ="burger" class='burger'></span>
+    </button>
+    <ul id = 'overlayTabs'>
+      <a class='oLtab' href="index.html">Home</a>
+      <a  class='oLtab' href="about.html">About Lucia</a>
+      <a class='oLtab' href="offerings.html">Offerings</a>
+      <a class='oLtab' href="events.html">Events</a>
+      <a class='oLtab' href="schedule.html">Schedule</a>
+      <a class='oLtab' href="contact.html">Contact</a>
+    </ul>
+  </div>
   <div class='main'>
     <img src="images/squidface.jpg" alt="Lucia vs. squid">
     <h2 class="eventHead">Senior Yoga and Meditation Retreat with Lucia!</h2>
@@ -55,19 +67,7 @@
 
 
     </div>
-    <div id='overlay'>
-      <button class='nav_toggle' onclick='toggle()'>
-        <span id ="burger" class='burger'></span>
-      </button>
-      <ul id = 'overlayTabs'>
-        <a class='oLtab' href="index.html">Home</a>
-        <a  class='oLtab' href="about.html">About Lucia</a>
-        <a class='oLtab' href="offerings.html">Offerings</a>
-        <a class='oLtab' href="events.html">Events</a>
-        <a class='oLtab' href="schedule.html">Schedule</a>
-        <a class='oLtab' href="contact.html">Contact</a>
-      </ul>
-    </div>
+
   </div>
   <script type="text/javascript" src='index.js'></script>
 
