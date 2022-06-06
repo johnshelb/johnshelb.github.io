@@ -101,7 +101,7 @@ header{
 }
 
 .open #overlay{
-  transform: translateX(7%);
+  transform: translateX(8%);
   opacity:90%;
 }
 .open .burger{
@@ -211,7 +211,6 @@ a:hover,a.oLtab:hover{
 
 
 a.emailLink{
-  font-size:2.5em;
   font-weight:bold;
   color:#5d413d;
 }
@@ -242,7 +241,7 @@ header{
   color:white;
 }
 
-fineprint{
+.fineprint{
   font-size:.7em;
   text-align:center;
 }
@@ -315,10 +314,10 @@ a.oLtab{
     margin-left:2rem;
     transform:none;
   }
-  #overlay.open{
+  /* #overlay.open{
     transform:translateX(100%);
     transition:transform 0s;
-  }
+  } */
 
   .container{
     margin-top:-150px;
@@ -394,7 +393,9 @@ a.oLtab{
   #contactPage h2{
     font-size: 3em;
   }
-
+  #contactForm .emailLink{
+    font-size: 2.5em;
+  }
   #contactPage form{
     font-size: 1.5em;
   }

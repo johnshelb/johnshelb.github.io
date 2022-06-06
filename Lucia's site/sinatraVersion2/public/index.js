@@ -2,7 +2,7 @@ window.addEventListener('resize',closeModal)
 const body = document.getElementsByTagName('body')[0]
 
 function closeModal(){
-  if(window.innerWidth>500){
+  if(window.innerWidth>1167){
     body.classList.remove('open')
   }
 }
