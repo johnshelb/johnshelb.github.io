@@ -83,7 +83,7 @@ header{
  .burger::after{
   bottom:10px;
  }
-#events ul{
+.eventFeatures ul{
   margin-top:10%;
   list-style-position:inside;
 }
@@ -240,10 +240,14 @@ header{
 .light{
   color:white;
 }
+.dark{
+  font-weight:900;
+}
 
 .fineprint{
   font-size:.7em;
   text-align:center;
+  font-weight: bold;
 }
 
 a.oLtab{
