@@ -1,0 +1,424 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* Layout */
+ *{
+  margin:0;
+  box-sizing: border-box;
+}
+#home{
+  margin:0;
+  background-color:rgba(145, 194, 209, 1);
+  height:100vh;
+  background-image: url("../public/images/Lucia Ecstatic.jpg");
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+#contactPage.contact{
+  background-color:#262626;
+  height:150vh;
+  background-image: url("../public/images/quill_and_page2.jpg");
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  row-gap:2em;
+}
+
+#contactForm{
+  text-align: center;
+  padding:2em;
+  border-radius: 15px;
+  background-color: #bd8247;
+  opacity:.7;
+  max-width: 85%;
+  margin: 0% auto;
+}
+
+header{
+  position:relative;
+  width: 100%;
+  margin:0 auto;
+  text-align: center;
+  background: #1c1c1c;
+}
+.tabs{
+  display:none;
+  margin:auto;
+}
+
+.headText{
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav_toggle{
+  position:absolute;
+  left:-34px;
+  border:0;
+  height:25px;
+  background: #1c1c1c;
+}
+
+.burger{
+  color:#fff;
+  position:relative;
+  height:5px;
+  width:25px;
+  background:white;
+  display:block;
+}
+.burger::before,
+.burger::after{
+  display:inline-block;
+  position:absolute;
+  left:0;
+  content:'';
+  width:25px;
+  height:5px;
+  background:white;
+}
+.burger::before{
+  top:10px;
+ }
+ .burger::after{
+  bottom:10px;
+ }
+.eventFeatures ul{
+  margin-top:10%;
+  list-style-position:inside;
+}
+
+#overlay{
+  top:1rem;
+  right:0;
+  position:fixed;
+  transform:translateX(100%);
+  height:100vh;
+  width:100vw;
+  background:#c1c1c1;
+  transition: transform 750ms ease-in-out;
+  z-index: 1;
+}
+
+.open #overlay{
+  transform: translateX(8%);
+  opacity:90%;
+}
+.open .burger{
+  transform:rotate(45deg);
+}
+.open .burger::after{
+  visibility:hidden;
+}
+.open .burger::before{
+  transform: rotate(90deg) translate(-10px);
+
+}
+input{
+  background:#d3ba56;
+}
+body{
+  overflow-x: hidden;
+}
+.container{
+  display:flex;
+  flex-direction: column;
+}
+#offerings_photo, #about img, #events img{
+  display:block;
+  margin:0 auto;
+  width:100%;
+}
+.schedLink{
+  margin-left:50%;
+  transform:translateX(-50%);
+  padding-bottom:2em;
+}
+.titleText{
+  background:#1c1c1c;
+  text-align: center;
+  padding:.3em;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index: 1;
+}
+
+.desc{
+  background:grey;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+}
+.descText{
+  padding:1em 2em 2em;
+}
+#about .main, #events .main{
+  text-align: center;
+  background:grey;
+  padding:2em;
+}
+
+#about img, #events img{
+  margin-bottom:2em;
+}
+
+#contactPage .main{
+  padding-top:10em;
+}
+#about .main,#events .main{
+ padding-top:25%;
+}
+#schedule{
+  background:#5d413d;
+}
+
+#schedule .main{
+  padding:12rem 2rem 1rem;
+}
+.skedType{
+  background: #5e96aa;
+  border-radius: 25px;
+  margin-bottom:2em;
+  padding:2em;
+}
+
+.skedType:last-child{
+  margin-bottom:0;
+}
+
+
+/* Typography */
+body{
+  font-family:Cormorant Infant;
+}
+a{
+  text-decoration: none;
+  font-weight:bold;
+}
+a:link, a:visited{
+  color:#8e8e8e;
+}
+
+a:hover,a.oLtab:hover{
+  color:#a433bf
+}
+.main {
+  line-height: 1.6;
+}
+
+a.emailLink{
+  font-weight:bold;
+  color:#5d413d;
+}
+
+.emailLink:hover{
+  color:#a433bf;;
+}
+
+#subscribe{
+  font-size: 1em;
+  padding:.5em 1.25em;
+  transition: transform 500ms;
+}
+#subscribe:hover{
+  transform:scale(1.1);
+}
+.herself{
+  color:red;
+  font-family:cursive;
+}
+header{
+  font-size:2rem;
+}
+.tabs{
+  font-size:.5em;
+}
+.light{
+  color:white;
+}
+.dark{
+  font-weight:900;
+}
+
+.fineprint{
+  font-size:.7em;
+  text-align:center;
+  font-weight: bold;
+}
+
+a.oLtab{
+  color:black;
+  font-size: 2em;
+  margin-bottom:2em;
+  display:block;
+}
+#offerings .container a, #schedule .main a, #events .main a{
+  color:#5d413d;
+}
+#offerings .container a:hover, #schedule .main a:hover, #events .main a:hover{
+  color:red;
+}
+.titleText{
+  font-size:3em;
+}
+.descText{
+  font-size:1.25em
+}
+.desc span{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+#bio{
+  width:80%;
+  font-size:1.5em;
+  margin:0 auto;
+}
+#retreat{
+  padding:1.25em;
+}
+
+.eventHead{
+  font-size: 2em;
+}
+
+.eventHead2{
+  font-size: 1.5em;
+}
+
+#events li{
+  font-size:.75em;
+}
+
+
+@media (min-width:1167px) {
+  /* Layout */
+
+  header{
+    display:flex;
+    align-items:center;
+    width:50%;
+    justify-content: flex-start;
+  }
+  .nav_toggle{
+    visibility: hidden;
+  }
+  .tabs{
+    display:flex;
+    justify-content: flex-end;
+    color:grey;
+    margin-right: 1em;
+    visibility:visible;
+  }
+
+  .headText{
+    margin-left:2rem;
+    transform:none;
+  }
+
+  .container{
+    margin-top:-150px;
+    background: #1c1c1c;
+    display:grid;
+    grid-template-columns:   1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-row-gap:1em;
+    grid-template-areas:
+      "chair chairDesc"
+      "hatha hathaDesc"
+      "rstrtv rstrtvDesc"
+      "med    medDesc";
+    align-items: center;
+    }
+
+  .chair{grid-area:chair}
+  .chairDesc{grid-area:chairDesc}
+  .hatha{grid-area:hatha}
+  .hathaDesc{grid-area:hathaDesc}
+  .rstrtv{grid-area:rstrtv}
+  .rstrtvDesc{grid-area:rstrtvDesc}
+  .med{grid-area:med}
+  .medDesc{grid-area:medDesc}
+
+  .container img{
+    width:100%;
+    height:100%;
+  }
+
+  .main{
+    position:relative;
+    top:10%;
+  }
+
+
+  #about img, #events img{
+    width:35%;
+  }
+  #about .main, #events .main{
+    padding-top:15%;
+  }
+
+  #schedule .main{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+  }
+  #schedule h2{
+    text-align: center;
+  }
+
+  #schedule .main, #contactPage .main{
+    padding-top:10em;
+    column-gap:2em;
+  }
+
+  /* Typography */
+  li{
+    font-size: 1em;
+  }
+
+  .tab{
+    font-size:1rem;
+    margin-left:1.4em;
+  }
+  .descText{
+    font-size:1.5em;
+  }
+  .titleText{
+    font-size:5em;
+  }
+  #contactPage h2{
+    font-size: 3em;
+  }
+  #contactForm .emailLink{
+    font-size: 2.5em;
+  }
+  #contactPage form{
+    font-size: 1.5em;
+  }
+  #schedule .main{
+    font-size:1.25em;
+  }
+  #retreat{
+    font-size:2em;
+  }
+  #about{
+    height:100vh;
+  }
+}
