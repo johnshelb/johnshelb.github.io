@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Song Picker</title>
+    <link href="index.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="main">
+      <div class = "addSong">
+        <input type="text" id = "add" placeholder="Add a song!"  autofocus/>
+        <button class="addButton" onclick = 'addSong()'>Add</button>
+      </div>
+      <div class = 'next'>
+        <button id='getSong' onclick="getSong()">What Song To Play Next?</button>
+        <p id="title"></p>
+      </div>
+      <div id = 'listDiv'>
+        <button id="showList" onclick = "showList()">See them all!</button>
+        <button id = 'hideList' onclick = "hideList()">Hide List</button>
+        <ul id = "list"></ul>
+      </div>
+
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
