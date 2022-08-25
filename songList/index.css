@@ -45,7 +45,6 @@ body{
   height:7em;
 }
 
-
 #listDiv{
   text-align: right;
   color:white;
@@ -63,4 +62,12 @@ li{
   font-size: .7em;
   padding:.25em;
   border:none;
+}
+@media screen and (max-width: 600px) {
+  body{
+  background-image: url('./guitar.jpg');
+  background-size:contain;
+  background-position:center;
+  background-color: black;
+}
 }
