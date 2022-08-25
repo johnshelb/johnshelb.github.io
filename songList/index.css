@@ -63,7 +63,7 @@ li{
   padding:.25em;
   border:none;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 8000px) {
   body{
   background-image: url('./guitar.jpg');
   background-size:contain;
