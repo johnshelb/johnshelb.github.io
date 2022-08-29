@@ -52,7 +52,6 @@ body{
   height:50%;
   position:absolute;
   right:2em;
-  /* overflow:scroll; */
 }
 ul{
   overflow:scroll;
@@ -73,7 +72,7 @@ ul{
 @media screen and (max-width: 900px) {
   body{
     background-image: url('./guitar.jpg');
-    background-size:contain;
+    background-size:cover;
     background-position:center;
     background-color: black;
   }
@@ -87,8 +86,8 @@ ul{
     padding-left: 0;
     width:100%;
     border-radius:0;
-    background:black;
-    color:grey;
+    background:grey;
+    color:blue;
     border:none;
     height:2rem;
     font-size: 1.75rem;
@@ -97,7 +96,7 @@ ul{
     outline:none;
   }
   .addButton{
-    margin:2px 0 1px;
+    margin:2px 0 2px;
     background:blue;
     color:white;
   }
