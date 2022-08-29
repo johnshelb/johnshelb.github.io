@@ -53,7 +53,6 @@ function addSong(){
 function deleteSong(song){
   let thisSong=song
   let songList = getList()
-  titleEl.textContent="You deleted " + song
   delete songList[thisSong]
   localStorage.setItem('songList',JSON.stringify(songList))
   hideList()
