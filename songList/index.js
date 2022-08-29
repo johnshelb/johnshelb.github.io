@@ -47,7 +47,6 @@ function addSong(){
   let songList = getList()
   songList[key]=0;
   localStorage.setItem('songList',JSON.stringify(songList))
-  titleEl.textContent="You added " + key;
   showList()
 }
 
