@@ -68,6 +68,7 @@ ul{
   font-size: .7em;
   padding:.25em;
   border:none;
+  color:red;
 }
 @media screen and (max-width: 900px) {
   body{
@@ -145,6 +146,12 @@ ul{
     position: absolute;
     font-size:1.75em;
     text-align: left;
+  }
+  .delete{
+    font-size: .4em;
+    padding:.25em;
+    border:none;
+    transform: translateY(-4px)
   }
   #title{
     margin:.5em;

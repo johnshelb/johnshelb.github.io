@@ -34,7 +34,6 @@ function getSong(){
 }
 
 function addSong(){
-  document.getElementsByTagName('input')[0].focus()
   let key = document.getElementsByTagName('input')[0].value
   if(key ==""){
     return
@@ -59,6 +58,7 @@ function deleteSong(song){
   localStorage.setItem('songList',JSON.stringify(songList))
   hideList()
   showList()
+  alert(`${song} has been deleted`)
 }
 
 function showList(){
@@ -69,7 +69,7 @@ function showList(){
     let item = document.createElement("li")
     let btn = document.createElement("button")
     btn.classList.add('delete')
-    btn.innerText = 'remove';
+    btn.innerText = 'X';
     btn.addEventListener("click",()=>deleteSong(song))
     let name = document.createElement('span')
     name.textContent = " " + song
