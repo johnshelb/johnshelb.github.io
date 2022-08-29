@@ -3,7 +3,7 @@ const titleEl = document.getElementById("title");
 
 
 if(!localStorage.getItem('songList')){
-  localStorage.setItem('songList',JSON.stringify({"Here Comes the Sun":0, "Imagine":0,"Let It Be":0}))
+  localStorage.setItem('songList',JSON.stringify({}))
 }
 
 function getList(){
