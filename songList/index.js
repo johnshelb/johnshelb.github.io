@@ -38,7 +38,6 @@ function addSong(){
   if(key ==""){
     return
   }
-  // key = key.charAt(0).toUpperCase() + key.slice(1)
   const keyWords = key.split(" ")
   const titleCase = keyWords.map(w=>w.charAt(0).toUpperCase() + w.slice(1))
   key = titleCase.join(" ")
@@ -68,12 +67,14 @@ function showList(){
   list.innerHTML=""
   titles.forEach(song=>{
     let item = document.createElement("li")
-    item.textContent = song
     let btn = document.createElement("button")
     btn.classList.add('delete')
     btn.innerText = 'remove';
     btn.addEventListener("click",()=>deleteSong(song))
+    let name = document.createElement('span')
+    name.textContent = " " + song
     item.appendChild(btn)
+    item.appendChild(name)
     list.appendChild(item)
   })
   document.getElementById('list').style.display='block';
