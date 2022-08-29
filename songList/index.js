@@ -1,3 +1,4 @@
+window.scrollTo(0, 100);
 const titleEl = document.getElementById("title");
 
 
