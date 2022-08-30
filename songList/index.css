@@ -180,7 +180,7 @@ body{
   width:50vw;
   background-color: black;
   background-size: contain;
-  background-position: center center;
+  background-position: center;
   height:100vh;
 }
 
@@ -246,9 +246,7 @@ ul{
     background-size:cover;
     background-position:center;
     background-color: black;
-
-
-    /* height: 85vh; */
+    height: 95vh;
     width:100vw;
   }
   .addSong{
