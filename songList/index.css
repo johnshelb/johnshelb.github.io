@@ -2,7 +2,9 @@
   box-sizing: border-box;
   padding:0;
 }
-
+::placeholder{
+  color:blue;
+}
 body{
   background-image: url('./guitar photo.jpg');
   background-size: cover;
