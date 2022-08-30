@@ -239,7 +239,7 @@ body{
 }
 
 ul{
-  overflow:scroll;
+  overflow:auto;
   height:85%;
   list-style-type: none;
   padding:0;
