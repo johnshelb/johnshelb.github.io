@@ -177,7 +177,7 @@ body{
   position: relative;
   margin: 0;
 
-  width:50vw;
+  width:75vw;
   background-color: black;
   background-size: contain;
   background-position: center;
@@ -246,7 +246,7 @@ ul{
     background-size:cover;
     background-position:center;
     background-color: black;
-    height: 95vh;
+    height: 90vh;
     width:100vw;
   }
   .addSong{
