@@ -266,13 +266,15 @@ ul{
   text-align: center;
   color:blue;
   background:black;
+  width:70%;
 }
 .addButton{
   font-size: 3em;
   background: black;
   color:grey;
   padding:2px;
-  transform:translateY(-15%)
+  transform:translateY(-15%);
+  width:25%;
 }
 @media screen and (max-width: 900px) {
   body{
