@@ -60,6 +60,7 @@ function deleteSong(song){
 }
 
 function showList(){
+  document.getElementById('title').textContent=""
   const titles = Object.keys(getList()).sort((a,b)=>a>b?1:-1)
   const list = document.getElementById("list")
   list.innerHTML=""
