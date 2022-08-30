@@ -12,7 +12,7 @@ function getList(){
 
 function getSong(){
   let songList = getList()
-  const songs = Object.keys(songList);
+  const songs = Object.keys(songList).sort((a,b)=>a>b);
 //continue the process as long as there is at least 1 song with fewer than 4 plays
   while(Math.min(...Object.values(songList))<4){
     let index = Math.floor(Math.random() * songs.length)
