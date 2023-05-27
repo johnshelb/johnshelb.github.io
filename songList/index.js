@@ -1,17 +1,19 @@
 const titleEl = document.getElementById("title");
 
-
-
 if(!localStorage.getItem('songList')){
   localStorage.setItem('songList',JSON.stringify({}))
 }
-
-function getList(){
-  return JSON.parse(localStorage.getItem('songList'))
+if(!localStorage.getItem('harp')){
+  localStorage.setItem('harp',JSON.stringify({}))
 }
 
-function getSong(){
-  let songList = getList()
+function getList(instrument){
+  return JSON.parse(localStorage.getItem(instrument=="guitar"?'songList':'harp'));
+}
+
+
+function getSong(instrument){
+  let songList = getList(instrument)
   const songs = Object.keys(songList).sort((a,b)=>a>b);
 //continue the process as long as there is at least 1 song with fewer than 4 plays
   while(Math.min(...Object.values(songList))<4){
@@ -20,7 +22,8 @@ function getSong(){
     if(songList[title] < 4){
       songList[title]+=1;
       titleEl.innerText=title;
-      localStorage.setItem('songList',JSON.stringify(songList))
+      let storageKey = instrument=="guitar"?'songList':'harp'
+      localStorage.setItem(storageKey,JSON.stringify(songList))
       hideList()
       return;
     }
@@ -28,11 +31,11 @@ function getSong(){
   for(let song in songList){
     songList[song]=0
   }
-  localStorage.setItem('songList',JSON.stringify(songList))
+  localStorage.setItem(storageKey,JSON.stringify(songList))
   getSong()
 }
 
-function addSong(){
+function addSong(instrument){
   let key = document.getElementsByTagName('input')[0].value
   if(key ==""){
     return
@@ -43,25 +46,27 @@ function addSong(){
 
 
   document.getElementsByTagName('input')[0].value="";
-  let songList = getList()
+  let songList = getList(instrument)
   songList[key]=0;
-  localStorage.setItem('songList',JSON.stringify(songList))
-  showList()
+  let storageKey = instrument=="guitar"?'songList':'harp'
+  localStorage.setItem(storageKey,JSON.stringify(songList))
+  showList(instrument)
 }
 
-function deleteSong(song){
+function deleteSong(song, instrument){
   let thisSong=song
-  let songList = getList()
+  let songList = getList(instrument)
   delete songList[thisSong]
-  localStorage.setItem('songList',JSON.stringify(songList))
+  let storageKey = instrument=="guitar"?'songList':'harp'
+  localStorage.setItem(storageKey,JSON.stringify(songList))
   hideList()
-  showList()
+  showList(instrument)
   alert(`${song} has been deleted`)
 }
 
-function showList(){
+function showList(instrument){
   document.getElementById('title').textContent=""
-  const titles = Object.keys(getList()).sort((a,b)=>a>b?1:-1)
+  const titles = Object.keys(getList(instrument)).sort((a,b)=>a>b?1:-1)
   const list = document.getElementById("list")
   list.innerHTML=""
   titles.forEach(song=>{
@@ -69,7 +74,7 @@ function showList(){
     let btn = document.createElement("button")
     btn.classList.add('delete')
     btn.innerText = 'X';
-    btn.addEventListener("click",()=>deleteSong(song))
+    btn.addEventListener("click",()=>deleteSong(song,instrument))
     let name = document.createElement('span')
     name.textContent = " " + song
     item.appendChild(btn)

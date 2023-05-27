@@ -4,24 +4,24 @@
     <meta charset="utf-8">
     <meta name = 'viewport'
     content = 'width=device-width, initial-scale=1'/>
-    <title>Song Picker</title>
+    <title>Harmonica Songs</title>
     <link href="index.css" rel="stylesheet">
   </head>
   <body>
     <!-- <div class="main"> -->
       <div class = 'next'>
-        <button id='getSong' autofocus onclick="getSong('guitar')">WHAT TO PLAY NOW?</button>
+        <button id='getSong' autofocus onclick="getSong('harp')">WHAT TO PLAY NOW?</button>
         <p id="title"></p>
       </div>
       <div id = 'listDiv'>
-        <button id="showList" onclick = "showList('guitar')">Show All Songs</button>
+        <button id="showList" onclick = "showList('harp')">Show All Songs</button>
         <button id = 'hideList' onclick = "hideList()">Hide</button>
         <ul id = "list"></ul>
       </div>
-    <a href="./harp.html">Go to Harp page</a>
+      <a href="./index.html">Go to Guitar page</a>
       <div class = "addSong">
         <input type="text" id = "addInput" placeholder="Add a song!"/>
-        <button class="addButton" onclick = 'addSong("guitar")'>Submit</button>
+        <button class="addButton" onclick = 'addSong("harp")'>Submit</button>
       </div>
     <!-- </div> -->
     <script src="index.js"></script>
