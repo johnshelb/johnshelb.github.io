@@ -19,7 +19,9 @@ body{
   width:75vw;
   height:100vh;
 }
-
+a{
+  color:white;
+}
 .next{
   width: 100%;
   margin:0 auto;
