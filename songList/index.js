@@ -31,6 +31,7 @@ function getSong(instrument){
   for(let song in songList){
     songList[song]=0
   }
+  titleEl.innerText = storageKey;
   localStorage.setItem(storageKey,JSON.stringify(songList))
   getSong()
 }
