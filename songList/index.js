@@ -13,7 +13,8 @@ function getList(instrument){
 
 
 function getSong(instrument){
-  let songList = getList(instrument)
+  const songList = getList(instrument)
+  const storageKey = instrument=="guitar"?'songList':'harp'
   const songs = Object.keys(songList).sort((a,b)=>a>b);
 //continue the process as long as there is at least 1 song with fewer than 4 plays
   while(Math.min(...Object.values(songList))<4){
@@ -22,7 +23,6 @@ function getSong(instrument){
     if(songList[title] < 4){
       songList[title]+=1;
       titleEl.innerText=title;
-      let storageKey = instrument=="guitar"?'songList':'harp'
       localStorage.setItem(storageKey,JSON.stringify(songList))
       hideList()
       return;
