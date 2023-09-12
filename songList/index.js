@@ -62,7 +62,7 @@ function deleteSong(song, instrument){
   localStorage.setItem(storageKey,JSON.stringify(songList))
   hideList()
   showList(instrument)
-  alert(`${song} has been deleted`)
+  alert(`${song} has been deletedBOOHOO`)
 }
 
 function showList(instrument){
