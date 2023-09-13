@@ -94,7 +94,7 @@ function hideList(){
 }
 
 function sendList(){
-  const subject = encodeURIComponent("This is the subject")
-  const body = encodeURIComponent("This is my body")
+  const subject = encodeURIComponent("Current Song List " + instrument)
+  const body = encodeURIComponent(getList())
   window.open(`mailto:johnshelby@yahoo.com?subject=${subject}&body=${body}`)
 }
