@@ -93,8 +93,8 @@ function hideList(){
   document.getElementById('showList').style.display='inline';
 }
 
-function sendList(){
+function sendList(instrument){
   const subject = encodeURIComponent("Current Song List " + instrument)
-  const body = encodeURIComponent(getList())
+  const body = encodeURIComponent(getList(instrument))
   window.open(`mailto:johnshelby@yahoo.com?subject=${subject}&body=${body}`)
 }
