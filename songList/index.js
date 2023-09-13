@@ -92,3 +92,9 @@ function hideList(){
   document.getElementById('hideList').style.display='none';
   document.getElementById('showList').style.display='inline';
 }
+
+function sendList(){
+  const subject = encodeURIComponent("This is the subject")
+  const body = encodeURIComponent("This is my body")
+  window.open(`mailto:johnshelby@yahoo.com?subject=${subject}&body=${body}`)
+}
