@@ -6,4 +6,4 @@
 <p><a href="https://johnshelb.github.io/simon">Simon</a></p>
 <p><a href="https://johnshelb.github.io/LaCelians/faces.html">La Celians</a></p>
 <p><a href="https://johnshelb.github.io/songList/index.html">Song Picker</a></p>
-<p><a href="https://johnshelb.github.io/photos.html">PCSA Photos</a></p>
+<p><a href="https://johnshelb.github.io/PCSAphotos.html">PCSA Photos</a></p>
