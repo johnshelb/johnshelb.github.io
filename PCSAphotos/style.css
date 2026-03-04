@@ -3,13 +3,46 @@ html{
 }
 
 img{
-    margin: 0 auto;
-    max-height: 33vh;
-    max-width: 20%;
+    max-height: 33.3vh;
+    width: 20%;
 }
 img:hover{
-    transform: scale(2.5); 
+    transform: scale(2); 
     transition: 0.5s;
+}
+img.left:hover{
+    transform: scale(2) translateX(50%);
+    transition: 0.5s;
+}
+img.right:hover{
+    transform: scale(2) translateX(-50%);
+    transition: 0.5s;
+}
+
+img.Rick:hover{
+    transform: scale(2) translateY(50%);
+    transition: 0.5s;
+}
+img.Rick.right:hover{
+    transform: scale(2) translate(-50%, 50%);
+    transition: 0.5s;
+}
+img.Rick.left:hover{
+    transform: scale(2) translate(50%, 50%);
+    transition: 0.5s;
+}
+
+img.John:hover{
+    transform: scale(2) translateY(-50%);
+    transition: 0.5s;
+}
+img.John.left:hover{
+    transform: scale(2) translate(50%, -50%);
+    transition: 0.5s;   
+}
+img.John.right:hover{
+    transform: scale(2) translate(-50%, -50%);
+    transition: 0.5s;   
 }
 #container
 {
