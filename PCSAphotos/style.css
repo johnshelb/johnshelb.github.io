@@ -2,20 +2,28 @@ html{
     background-color: black;
 }
 img {
-    max-height: 33.3vh;
-    width: 20%;
+    max-height: 23.3vh;
+    width: 15%;
     --x: 0%;
     --y: 0%;
     transition: transform 0.5s;
 }
 
-img:hover {transform: scale(2) translate(var(--x), var(--y));}
+img:hover {transform: scale(3.5) translate(var(--x), var(--y));}
 img.left{ --x: 50%; }
 img.right{ --x: -50%; }
 img.Rick{ --y: 50%; }
 img.John{ --y: -50%; }
-#container
-{
+
+div{
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#container{
+    display: flex; 
+    flex-direction: column;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    height:100vh;
 }
