@@ -1,0 +1,28 @@
+html{
+    background-color: black;
+}
+img {
+    max-height: 23.3vh;
+    width: 15%;
+    --x: 0%;
+    --y: 0%;
+    transition: transform 0.5s;
+}
+
+img:hover {transform: scale(3.5) translate(var(--x), var(--y));}
+img.left{ --x: 50%; }
+img.right{ --x: -50%; }
+img.Rick{ --y: 0%; }
+
+div{
+    display: flex;
+    justify-content: space-around;
+}
+
+#container{
+    display: flex; 
+    flex-direction: column;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    height:100vh;
+}
