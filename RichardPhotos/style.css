@@ -3,7 +3,7 @@ html{
 }
 img {
     max-height: 23.3vh;
-    width: 15%;
+    max-width: 15%;
     --x: 0%;
     --y: 0%;
     transition: transform 0.5s;
